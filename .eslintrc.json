@@ -1,5 +1,6 @@
 {
   "extends": ["next/core-web-vitals", "plugin:import/warnings", "prettier"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "import/order": [
       "error",
