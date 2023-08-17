@@ -1,0 +1,13 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:import/warnings", "prettier"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
+}
