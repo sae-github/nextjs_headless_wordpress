@@ -12,6 +12,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@kuma-ui/core": "^1.1.3",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
@@ -24,6 +25,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@kuma-ui/next-plugin": "^1.1.5",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "eslint-config-prettier": "^9.0.0",
