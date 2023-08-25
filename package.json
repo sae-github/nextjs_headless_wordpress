@@ -33,7 +33,7 @@
     "lint-staged": "^14.0.0"
   },
   "lint-staged": {
-    "*.{ts,tsx,css,json}": [
+    "*.{ts,tsx,json}": [
       "eslint",
       "npm run format"
     ]
