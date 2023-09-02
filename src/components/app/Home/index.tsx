@@ -1,33 +1,47 @@
-import { Box, Flex, Heading, Text, VStack } from '@kuma-ui/core'
-import { styled } from '@kuma-ui/core'
+import { Box, Flex, Heading, Text, VStack, styled } from '@kuma-ui/core'
+import { format } from 'date-fns'
 import Link from 'next/link'
 import React from 'react'
 
-export const HomeContent = () => {
+type Props = {
+  id: number
+  date: string
+  title: {
+    rendered: string
+  }
+}
+
+const getPosts = async () => {
+  const res = await fetch(
+    'https://itosae.com/wp-json/wp/v2/posts?_embed&page=1&_fields=title,id,date,content',
+  )
+  if (!res.ok) throw new Error('Failed to fetch data')
+  return res.json()
+}
+
+export const HomeContent = async () => {
+  const data: Props[] = await getPosts()
   return (
-    <Box maxWidth='60rem' margin='0 auto' paddingX='2rem'>
-      <VStack justify='center' alignItems='center' gap='8px'>
-        <article>
-          <Heading as='h2'>
-            <Link href='/' style={{ color: 'blue' }}>
-              記事のタイトル
-            </Link>
-          </Heading>
-          <Flex gap='8px'>
-            <Tag>振り返り</Tag>
-            <Tag>JavaScript</Tag>
-            <Tag>TypeScript</Tag>
-          </Flex>
-          <Box>
-            <Text>
-              記事の内容がここに入ります。記事の内容がここに入ります。記事の内容がここに入ります。記事の内容がここに入ります。記事の内容がここに入ります。記事の内容がここに入...
-              <Link href='/' style={{ color: 'blue' }}>
-                続きを読む
+    <Box maxWidth='60rem' margin='0 auto' padding='2rem' backgroundColor='#fff' borderRadius='20px'>
+      <VStack justify='center' alignItems='center'>
+        {data.map(({ id, date, title }) => (
+          <Article key={id}>
+            <Heading as='h2' fontSize='1.5rem' margin='0px' border='none'>
+              <Link href={`/${id}`} style={{ color: '#4848a2' }}>
+                {title.rendered}
               </Link>
-            </Text>
-            <small>2023.08.22</small>
-          </Box>
-        </article>
+            </Heading>
+            {/* // TODO: 動的に出力する */}
+            <Flex gap='.5rem' marginTop='.5rem'>
+              <Tag>振り返り</Tag>
+              <Tag>JavaScript</Tag>
+              <Tag>TypeScript</Tag>
+            </Flex>
+            <Box marginTop='.5rem'>
+              <small>{format(new Date(date), 'yyyy/MM/dd')}</small>
+            </Box>
+          </Article>
+        ))}
       </VStack>
     </Box>
   )
@@ -38,4 +52,13 @@ const Tag = styled('span')`
   padding: 0 8px;
   border: 1px solid #ccc;
   border-radius: 20px;
+`
+
+const Article = styled('article')`
+  padding: 1rem;
+  width: 100%;
+
+  & + & {
+    border-top: 1px solid #ccc;
+  }
 `
