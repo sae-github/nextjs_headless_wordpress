@@ -15,6 +15,7 @@ const getPosts = async () => {
   const res = await fetch(
     'https://itosae.com/wp-json/wp/v2/posts?_embed&page=1&_fields=title,id,date,content',
   )
+  if (!res.ok) throw new Error('Failed to fetch data')
   return res.json()
 }
 
