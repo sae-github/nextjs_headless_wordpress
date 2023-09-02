@@ -30,6 +30,7 @@ export const HomeContent = async () => {
                 {title.rendered}
               </Link>
             </Heading>
+            {/* // TODO: 動的に出力する */}
             <Flex gap='.5rem' marginTop='.5rem'>
               <Tag>振り返り</Tag>
               <Tag>JavaScript</Tag>
