@@ -25,13 +25,12 @@ p {
   line-height: 1.5rem;
 }
 
-
 li {
   line-height: 2rem;
 }
 
 time {
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   display: block;
 }
 
