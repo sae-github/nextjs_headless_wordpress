@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlogContent } from '@/src/components/app/[id]'
+import { BlogContent } from '@/app/components/app/[id]'
 
 const Blog = ({ params }: { params: Props }) => {
   return <BlogContent params={params} />
