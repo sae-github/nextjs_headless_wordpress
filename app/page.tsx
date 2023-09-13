@@ -1,10 +1,4 @@
-import { Metadata } from 'next'
-import { HomeContent } from '@/src/components/app/Home'
-
-export const metadata: Metadata = {
-  title: 'Sae/Blog',
-  description: '駆け出しフロントエンドエンジニアの積み上げブログです',
-}
+import { HomeContent } from '@/app/components/app/Home'
 
 const Home = () => {
   return <HomeContent />

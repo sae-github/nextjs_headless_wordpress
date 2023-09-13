@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Text, VStack, styled } from '@kuma-ui/core'
 import { format } from 'date-fns'
+import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
 
