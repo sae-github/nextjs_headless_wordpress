@@ -28,7 +28,7 @@ export const HomeContent = async () => {
         {data.map(({ id, date, title }) => (
           <Article key={id}>
             <Heading as='h2' fontSize='1.5rem' margin='0px' border='none'>
-              <Link href={`/${id}`} style={{ color: '#4848a2' }}>
+              <Link href={`/posts/${id}`} style={{ color: '#4848a2' }}>
                 {title.rendered}
               </Link>
             </Heading>
