@@ -11,7 +11,7 @@ const getPost = async (id: string) => {
   return res.json()
 }
 
-export const BlogContent: FC<{ params: { id: string } }> = async ({ params }) => {
+export const PostContent: FC<{ params: { id: string } }> = async ({ params }) => {
   const post = await getPost(params.id)
   return (
     <Box maxWidth='60rem' margin='0 auto' paddingX='2rem'>
