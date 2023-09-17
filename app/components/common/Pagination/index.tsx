@@ -8,20 +8,18 @@ export const Pagination: FC<{
 }> = ({ totalPages, currentPage }) => {
   return (
     <Root>
-      <Link href='/1' aria-disabled={!currentPage || Number(currentPage) === 1}>
+      <Link href='/1' aria-disabled={!currentPage || +currentPage === 1}>
         &laquo;
       </Link>
-      {[...Array(Number(totalPages))].map((_, i) => {
-        return i + 1 === Number(currentPage) ? (
-          <span key={i} style={{ display: 'inline-block', fontSize: '1.2rem', color: '#ccc' }}>
-            {i + 1}
-          </span>
+      {[...Array(Number(totalPages))].map((_, i) =>
+        i + 1 === +currentPage ? (
+          <CurrentPage key={i}>{i + 1}</CurrentPage>
         ) : (
-          <Link href={`/${i + 1}`} key={i} style={{}}>
+          <Link href={`/${i + 1}`} key={i}>
             {i + 1}
           </Link>
-        )
-      })}
+        ),
+      )}
       <Link href={`/${totalPages}`} aria-disabled={currentPage === totalPages}>
         &raquo;
       </Link>
@@ -49,4 +47,10 @@ const Root = styled('div')`
   a:hover {
     opacity: 0.7;
   }
+`
+
+const CurrentPage = styled('span')`
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ccc;
 `
