@@ -14,20 +14,18 @@ const getPost = async (id: string) => {
 export const PostContent: FC<{ params: { id: string } }> = async ({ params }) => {
   const post = await getPost(params.id)
   return (
-    <Box maxWidth='60rem' margin='0 auto' paddingX='2rem'>
-      <article>
-        <Box>
-          <h1>{post.title.rendered}</h1>
-          <time dateTime={post.date}>{format(new Date(post.date), 'yyyy/MM/dd')}</time>
-        </Box>
-        <Box marginTop='2rem' background='#fff' borderRadius='20px' padding='1rem 3rem'>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${post.content.rendered}`,
-            }}
-          />
-        </Box>
-      </article>
-    </Box>
+    <article>
+      <Box>
+        <h1>{post.title.rendered}</h1>
+        <time dateTime={post.date}>{format(new Date(post.date), 'yyyy/MM/dd')}</time>
+      </Box>
+      <Box
+        marginTop='2rem'
+        padding='0 1rem'
+        dangerouslySetInnerHTML={{
+          __html: `${post.content.rendered}`,
+        }}
+      ></Box>
+    </article>
   )
 }
