@@ -1,22 +1,28 @@
-import { Flex, Heading, VStack, styled } from '@kuma-ui/core'
+import { Flex, HStack, Heading, VStack, styled } from '@kuma-ui/core'
 import { format } from 'date-fns'
 import Link from 'next/link'
-import React from 'react'
+import React, { FC } from 'react'
+import { Pagination } from '../../common/Pagination'
 import { Tags } from '../../common/Tags'
 
-const getPosts = async () => {
+const getPosts = async (page: string) => {
   const res = await fetch(
-    'https://itosae.com/wp-json/wp/v2/posts?_embed&page=1&_fields=title,id,date,content,categories',
+    `https://itosae.com/wp-json/wp/v2/posts?_embed&page=${page}&_fields=title,id,date,content,categories`,
   )
   if (!res.ok) throw new Error('Failed to fetch data')
-  return res.json()
+  return {
+    totalPages: res.headers.get('x-wp-totalpages'),
+    posts: await res.json(),
+  }
 }
 
-export const HomeContent = async () => {
-  const data: Props[] = await getPosts()
+export const HomeContent: FC<{ page?: string }> = async ({ page }) => {
+  const { posts, totalPages }: { posts: Post[]; totalPages: string | null } = await getPosts(
+    page || '1',
+  )
   return (
     <VStack justify='center' alignItems='center'>
-      {data.map(({ id, date, title, categories }) => (
+      {posts.map(({ id, date, title, categories }) => (
         <Article key={id}>
           <Heading as='h2' fontSize='1.5rem' margin='0px' border='none' padding='0px'>
             <Link
@@ -32,6 +38,7 @@ export const HomeContent = async () => {
           <small>{format(new Date(date), 'yyyy/MM/dd')}</small>
         </Article>
       ))}
+      {totalPages && <Pagination totalPages={totalPages} currentPage={page || '1'} />}
     </VStack>
   )
 }
@@ -49,7 +56,7 @@ const Article = styled('article')`
   }
 `
 
-type Props = {
+type Post = {
   id: number
   date: string
   title: {
