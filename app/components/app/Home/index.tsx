@@ -2,6 +2,7 @@ import { Flex, Heading, VStack, styled } from '@kuma-ui/core'
 import { format } from 'date-fns'
 import Link from 'next/link'
 import React from 'react'
+import { Tags } from '../../common/Tags'
 
 const getPosts = async () => {
   const res = await fetch(
@@ -11,18 +12,8 @@ const getPosts = async () => {
   return res.json()
 }
 
-const getAllCategories = async () => {
-  const res = await fetch('https://itosae.com/wp-json/wp/v2/categories?_fields=name,slug,id')
-  if (!res.ok) throw new Error('Failed to fetch data')
-  return res.json()
-}
-
-const getCategories = (categories: Category[], ids: number[]) =>
-  categories.filter((category) => ids.includes(category.id))
-
 export const HomeContent = async () => {
   const data: Props[] = await getPosts()
-  const allCategories: Category[] = await getAllCategories()
   return (
     <VStack justify='center' alignItems='center'>
       {data.map(({ id, date, title, categories }) => (
@@ -36,10 +27,7 @@ export const HomeContent = async () => {
             </Link>
           </Heading>
           <Flex gap='.5rem' marginTop='.4rem'>
-            {allCategories &&
-              getCategories(allCategories, categories).map((category) => (
-                <Tag key={category.id}>#{category.name}</Tag>
-              ))}
+            <Tags categoryIds={categories} />
           </Flex>
           <small>{format(new Date(date), 'yyyy/MM/dd')}</small>
         </Article>
@@ -47,11 +35,6 @@ export const HomeContent = async () => {
     </VStack>
   )
 }
-
-const Tag = styled('span')`
-  text-align: center;
-  color: gray;
-`
 
 const Article = styled('article')`
   padding: 1rem 0;
@@ -73,10 +56,4 @@ type Props = {
     rendered: string
   }
   categories: number[]
-}
-
-type Category = {
-  name: string
-  id: number
-  slug: string
 }
