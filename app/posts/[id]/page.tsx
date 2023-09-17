@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostContent } from '@/app/components/app/posts/[id]'
+import { PostContent } from '@/app/components/app/Posts/[id]'
 
 const Post = ({ params }: { params: Props }) => {
   return <PostContent params={params} />
