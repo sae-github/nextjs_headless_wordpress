@@ -81,7 +81,7 @@ pre {
 
 .wp-block-cocoon-blocks-blank-box-1 {
   border: 1px solid #ccc;
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 blockquote {
@@ -92,7 +92,7 @@ blockquote {
 
 blockquote::before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   width: 4px;
   height: 100%;
