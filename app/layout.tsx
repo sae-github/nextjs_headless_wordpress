@@ -32,7 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 const Body = styled('body')`
   max-width: 60rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  @media (min-width: md) {
+    padding: 0 2rem;
+  }
 `
 
 const Main = styled('main')`

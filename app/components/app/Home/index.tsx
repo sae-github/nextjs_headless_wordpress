@@ -24,7 +24,7 @@ export const HomeContent: FC<{ page?: string }> = async ({ page }) => {
     <VStack justify='center' alignItems='center'>
       {posts.map(({ id, date, title, categories }) => (
         <Article key={id}>
-          <Heading as='h2' fontSize='1.5rem' margin='0px' border='none' padding='0px'>
+          <Heading as='h2' fontSize={['1.2rem', '1.5rem']} margin='0px' border='none' padding='0px'>
             <Link
               href={`/posts/${id}`}
               style={{ color: '#333', textDecoration: 'none', fontWeight: 'normal' }}

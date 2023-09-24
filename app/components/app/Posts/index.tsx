@@ -26,7 +26,7 @@ export const PostContent: FC<{ params: { id: string } }> = async ({ params }) =>
       </HStack>
       <Box
         marginTop='2rem'
-        padding='0 1rem'
+        padding={['0 .8rem', '0 1rem']}
         dangerouslySetInnerHTML={{
           __html: `${post.content.rendered}`,
         }}
