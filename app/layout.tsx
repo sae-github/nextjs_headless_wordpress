@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: '/user.svg',
+        url: '/ogp-image.png',
         width: 80,
         height: 80,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary',
     images: [
       {
-        url: '/user.svg',
+        url: '/ogp-image.png',
         width: 80,
         height: 80,
       },
