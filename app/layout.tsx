@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: 'Sae/note',
   icons: './favicon.ico',
   openGraph: {
-    images: '../public/user.svg',
+    images: '/user.svg',
   },
 }
 
