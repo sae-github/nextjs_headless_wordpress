@@ -12,15 +12,29 @@ const kakuGothic = Zen_Kaku_Gothic_New({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? 'http://localhost:3000'),
   title: 'Sae/note',
+  description: '',
   icons: './favicon.ico',
   openGraph: {
-    images: '/user.svg',
+    images: [
+      {
+        url: '/user.svg',
+        width: 80,
+        height: 80,
+      },
+    ],
     title: 'Sae/note',
   },
   twitter: {
     title: 'Sae/note',
+    description: '',
     card: 'summary',
-    images: '/user.svg',
+    images: [
+      {
+        url: '/user.svg',
+        width: 80,
+        height: 80,
+      },
+    ],
   },
 }
 
