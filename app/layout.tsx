@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='ja' className={kakuGothic.className}>
       <Body>
         <Header />
-        <Box display='flex'>
+        <Box display='flex' flexDirection={['column', 'column', 'row']}>
           <Main>{children}</Main>
           <Aside>
             <AdminsArea />
@@ -38,9 +38,17 @@ const Body = styled('body')`
 const Main = styled('main')`
   padding-bottom: 2rem;
   flex: 1;
-  width: 80%;
+  width: 100%;
+  @media (min-width: md) {
+    width: 80%;
+  }
 `
 
 const Aside = styled('aside')`
-  width: 18%;
+  width: 100%;
+  padding-bottom: 2rem;
+  @media (min-width: md) {
+    width: 18%;
+    min-width: 160px;
+  }
 `
