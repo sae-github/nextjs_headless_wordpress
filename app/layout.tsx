@@ -11,6 +11,7 @@ const kakuGothic = Zen_Kaku_Gothic_New({
 
 export const metadata: Metadata = {
   title: 'Sae/note',
+  icons: './favicon.ico',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
