@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   icons: './favicon.ico',
   openGraph: {
     images: '/user.svg',
+    title: 'Sae/note',
+  },
+  twitter: {
+    title: 'Sae/note',
+    card: 'summary',
+    images: '/user.svg',
   },
 }
 
