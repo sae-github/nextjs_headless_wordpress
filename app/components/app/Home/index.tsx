@@ -16,7 +16,7 @@ const getPosts = async (page: string) => {
   }
 }
 
-export const HomeContent: FC<{ page?: string }> = async ({ page }) => {
+export const HomeContent: FC<{ page: string }> = async ({ page }) => {
   const { posts, totalPages }: { posts: Post[]; totalPages: string | null } = await getPosts(
     page || '1',
   )
