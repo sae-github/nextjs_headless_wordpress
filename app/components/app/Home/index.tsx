@@ -1,28 +1,18 @@
-import { Flex, HStack, Heading, VStack, styled } from '@kuma-ui/core'
+import { Box, Flex, Heading, Text, VStack, styled } from '@kuma-ui/core'
 import { format } from 'date-fns'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import React, { FC } from 'react'
 import { Pagination } from '../../common/Pagination'
 import { Tags } from '../../common/Tags'
-
-const getPosts = async (page: string) => {
-  const res = await fetch(
-    `https://itosae.com/wp-json/wp/v2/posts?_embed&page=${page}&_fields=title,id,date,content,categories`,
-  )
-  if (!res.ok) throw new Error('Failed to fetch data')
-  return {
-    totalPages: res.headers.get('x-wp-totalpages'),
-    posts: await res.json(),
-  }
-}
+import { postApi } from '@/apis/post/postApi'
 
 export const HomeContent: FC<{ page: string }> = async ({ page }) => {
-  const { posts, totalPages }: { posts: Post[]; totalPages: string | null } = await getPosts(
-    page || '1',
-  )
-  return (
+  if (isNaN(Number(page))) notFound()
+  const result = await postApi.getPosts(page || '1')
+  return result.isSuccess ? (
     <VStack justify='center' alignItems='center'>
-      {posts.map(({ id, date, title, categories }) => (
+      {result.data.map(({ id, date, title, categories }) => (
         <Article key={id}>
           <Heading as='h2' fontSize={['1.2rem', '1.5rem']} margin='0px' border='none' padding='0px'>
             <Link
@@ -38,8 +28,15 @@ export const HomeContent: FC<{ page: string }> = async ({ page }) => {
           <small>{format(new Date(date), 'yyyy/MM/dd')}</small>
         </Article>
       ))}
-      {totalPages && <Pagination totalPages={totalPages} currentPage={page || '1'} />}
+      {result.totalPageCount && (
+        <Pagination totalPages={result.totalPageCount} currentPage={page || '1'} />
+      )}
     </VStack>
+  ) : (
+    <Box textAlign='center'>
+      <Text>{result.message}</Text>
+      <Link href='/'>トップに戻る</Link>
+    </Box>
   )
 }
 
@@ -55,12 +52,3 @@ const Article = styled('article')`
     opacity: 0.7;
   }
 `
-
-type Post = {
-  id: number
-  date: string
-  title: {
-    rendered: string
-  }
-  categories: number[]
-}
