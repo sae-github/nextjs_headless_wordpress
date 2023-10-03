@@ -14,9 +14,24 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     title: `${post.title.rendered} | Sae/note`,
     openGraph: {
       title: post.title.rendered,
+      images: [
+        {
+          url: '/ogp.png',
+          width: 80,
+          height: 80,
+        },
+      ],
     },
     twitter: {
       title: post.title.rendered,
+      card: 'summary',
+      images: [
+        {
+          url: '/ogp.png',
+          width: 80,
+          height: 80,
+        },
+      ],
     },
   }
 }
