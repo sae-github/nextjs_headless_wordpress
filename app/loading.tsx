@@ -1,9 +1,10 @@
 import { Box } from '@kuma-ui/core'
+import Image from 'next/image'
 
 export default function Loading() {
   return (
     <Box textAlign='center'>
-      <img src='/loading.gif' alt='...Loading' />
+      <Image src='/loading.gif' alt='...Loading' />
     </Box>
   )
 }
