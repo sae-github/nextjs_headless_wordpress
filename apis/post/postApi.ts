@@ -18,7 +18,7 @@ type PostsOutput = {
   categories: number[]
 }[]
 
-type PostOutput = {
+export type PostOutput = {
   id: number
   date: string
   title: {

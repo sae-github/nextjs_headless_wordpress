@@ -1,36 +1,33 @@
-import { Box, HStack, Text } from '@kuma-ui/core'
+import { Box, HStack } from '@kuma-ui/core'
 import { format } from 'date-fns'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { JSDOM } from 'jsdom'
 import React, { FC } from 'react'
 import './style.css'
-import { postApi } from '@/apis/post/postApi'
+import { PostOutput } from '@/apis/post/postApi'
 import { Tags } from '@/app/components/common/Tags'
 
-export const PostContent: FC<{ params: { id: string } }> = async ({ params }) => {
-  if (isNaN(Number(params.id))) notFound()
-  const result = await postApi.getPost(params.id)
-  return result.isSuccess ? (
+export const PostContent: FC<{ pageContent: PostOutput }> = ({ pageContent }) => {
+  const jsDom = new JSDOM(pageContent.content.rendered)
+  const titles = jsDom.window.document.querySelectorAll('h2')
+  titles.forEach((title, i) => {
+    title.id = `title-${i.toString()}`
+  })
+  return (
     <article>
-      <h1>{result.data.title.rendered}</h1>
+      <h1>{pageContent.title.rendered}</h1>
       <HStack alignItems='center' gap='8px'>
-        <time dateTime={result.data.date} style={{ marginTop: '0px' }}>
-          {format(new Date(result.data.date), 'yyyy/MM/dd')}
+        <time dateTime={pageContent.date} style={{ marginTop: '0px' }}>
+          {format(new Date(pageContent.date), 'yyyy/MM/dd')}
         </time>
-        <Tags categoryIds={result.data.categories} />
+        <Tags categoryIds={pageContent.categories} />
       </HStack>
       <Box
         marginTop='2rem'
         padding={['0 .8rem', '0 1rem']}
         dangerouslySetInnerHTML={{
-          __html: `${result.data.content.rendered}`,
+          __html: `${jsDom.serialize()}`,
         }}
-      ></Box>
+      />
     </article>
-  ) : (
-    <Box textAlign='center'>
-      <Text>{result.message}</Text>
-      <Link href='/'>トップに戻る</Link>
-    </Box>
   )
 }
