@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 import { postApi } from '@/apis/post/postApi'
 import { PostContent } from '@/app/components/app/Posts'
-import { TableOfContents } from '@/app/components/app/Posts/TableOfContent'
 import { AdminsArea } from '@/app/components/common/AdminsArea'
+import { TableOfContents } from '@/app/components/common/TableOfContent'
 
 const Post = async ({ params }: { params: Props }) => {
   if (isNaN(Number(params.id))) notFound()
@@ -24,7 +24,9 @@ const Post = async ({ params }: { params: Props }) => {
       </Main>
       <Aside>
         <AdminsArea />
-        {result.isSuccess && <TableOfContents textHtml={result.data.content.rendered} />}
+        <TableOfContentsArea>
+          {result.isSuccess && <TableOfContents textHtml={result.data.content.rendered} />}
+        </TableOfContentsArea>
       </Aside>
     </Box>
   )
@@ -48,7 +50,21 @@ const Main = styled('main')`
 const Aside = styled('aside')`
   width: 100%;
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
   @media (min-width: md) {
     width: 300px;
+    flex-direction: column;
+  }
+`
+
+const TableOfContentsArea = styled('div')`
+  display: none;
+  @media (min-width: md) {
+    display: block;
+    margin-top: 3rem;
+    position: sticky;
+    padding: 0 4rem;
+    top: 80px;
   }
 `

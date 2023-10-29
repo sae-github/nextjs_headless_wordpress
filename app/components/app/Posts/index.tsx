@@ -1,8 +1,9 @@
-import { Box, HStack } from '@kuma-ui/core'
+import { Box, HStack, styled } from '@kuma-ui/core'
 import { format } from 'date-fns'
 import { JSDOM } from 'jsdom'
 import React, { FC } from 'react'
 import './style.css'
+import { TableOfContents } from '../../common/TableOfContent'
 import { PostOutput } from '@/apis/post/postApi'
 import { Tags } from '@/app/components/common/Tags'
 
@@ -21,6 +22,10 @@ export const PostContent: FC<{ pageContent: PostOutput }> = ({ pageContent }) =>
         </time>
         <Tags categoryIds={pageContent.categories} />
       </HStack>
+      <TableOfContentArea>
+        <span>目次</span>
+        <TableOfContents textHtml={pageContent.content.rendered} />
+      </TableOfContentArea>
       <Box
         marginTop='2rem'
         padding={['0 .8rem', '0 1rem']}
@@ -31,3 +36,11 @@ export const PostContent: FC<{ pageContent: PostOutput }> = ({ pageContent }) =>
     </article>
   )
 }
+
+const TableOfContentArea = styled('div')`
+  display: block;
+  margin-top: 1rem;
+  @media (min-width: md) {
+    display: none;
+  }
+`
