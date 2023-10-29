@@ -115,3 +115,7 @@ p > code {
 cite {
   word-break: break-all;
 }
+
+.green {
+  color: #309830;
+}

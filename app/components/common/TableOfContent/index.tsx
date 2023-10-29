@@ -5,17 +5,15 @@ export const TableOfContents = ({ textHtml }: { textHtml: string }) => {
   const dom = new JSDOM(textHtml)
   const titleList = getContentTitles(dom.window.document.querySelectorAll('h2'))
   return (
-    <Root>
-      <Ol>
-        {titleList.map((title, i) => (
-          <li key={i}>
-            <a href={`#title-${i.toString()}`}>
-              {i + 1}.{title}
-            </a>
-          </li>
-        ))}
-      </Ol>
-    </Root>
+    <Ol>
+      {titleList.map((title, i) => (
+        <li key={i}>
+          <a href={`#title-${i.toString()}`}>
+            {i + 1}.{title}
+          </a>
+        </li>
+      ))}
+    </Ol>
   )
 }
 
@@ -26,13 +24,6 @@ const getContentTitles = (titles: NodeListOf<HTMLHeadingElement>) => {
   }
   return list
 }
-
-const Root = styled('div')`
-  position: sticky;
-  padding: 0 4rem;
-  top: 80px;
-  margin-top: 3rem;
-`
 
 const Ol = styled('ol')`
   padding-left: 0;
