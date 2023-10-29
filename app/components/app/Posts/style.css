@@ -92,7 +92,7 @@ blockquote {
 
 blockquote::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   width: 4px;
   height: 100%;
@@ -114,4 +114,8 @@ p > code {
 
 cite {
   word-break: break-all;
+}
+
+.green {
+  color: #309830;
 }
