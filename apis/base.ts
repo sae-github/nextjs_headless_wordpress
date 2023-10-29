@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation'
 import { Result } from './result'
 const WP_URL = 'https://itosae.com/wp-json/wp/v2'
 
@@ -6,6 +5,7 @@ export const requestApi = async <T = void>(method: Method, path: string): Promis
   try {
     const response = await fetch(`${WP_URL}/${path}`, {
       method: method,
+      cache: 'no-store',
     })
     const data = await response.json()
     const totalPageCount = response.headers.get('x-wp-totalpages')
