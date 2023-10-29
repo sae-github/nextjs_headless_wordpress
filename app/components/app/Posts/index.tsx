@@ -23,8 +23,10 @@ export const PostContent: FC<{ pageContent: PostOutput }> = ({ pageContent }) =>
         <Tags categoryIds={pageContent.categories} />
       </HStack>
       <TableOfContentArea>
-        <span>目次</span>
-        <TableOfContents textHtml={pageContent.content.rendered} />
+        <details>
+          <summary>目次</summary>
+          <TableOfContents textHtml={pageContent.content.rendered} />
+        </details>
       </TableOfContentArea>
       <Box
         marginTop='2rem'
