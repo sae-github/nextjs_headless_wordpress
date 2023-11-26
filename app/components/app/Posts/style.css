@@ -92,7 +92,7 @@ blockquote {
 
 blockquote::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   width: 4px;
   height: 100%;
@@ -118,4 +118,23 @@ cite {
 
 .green {
   color: #309830;
+}
+
+.wp-block-table {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background: #d3edeb;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
 }
