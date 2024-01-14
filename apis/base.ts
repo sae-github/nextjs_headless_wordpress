@@ -5,7 +5,6 @@ export const requestApi = async <T = void>(method: Method, path: string): Promis
   try {
     const response = await fetch(`${WP_URL}/${path}`, {
       method: method,
-      cache: 'no-store',
     })
     const data = await response.json()
     const totalPageCount = response.headers.get('x-wp-totalpages')
