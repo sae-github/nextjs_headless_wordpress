@@ -1,12 +1,6 @@
 import { styled } from '@kuma-ui/core'
 import { Metadata } from 'next'
-import { Zen_Kaku_Gothic_New } from 'next/font/google'
 import { Header } from './components/common/Header'
-
-const kakuGothic = Zen_Kaku_Gothic_New({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? 'http://localhost:3000'),
@@ -39,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Html lang='ja' className={kakuGothic.className}>
+    <Html lang='ja'>
       <Body>
         <Header />
         {children}
@@ -57,6 +51,8 @@ const Body = styled('body')`
   max-width: 60rem;
   margin: 0 auto;
   padding: 0 1rem;
+  font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック',
+    'MS PGothic', sans-serif;
   @media (min-width: md) {
     padding: 0 2rem;
   }
