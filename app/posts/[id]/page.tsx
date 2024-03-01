@@ -43,7 +43,7 @@ const Main = styled('main')`
   flex: 1;
   width: 100%;
   @media (min-width: md) {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
   }
 `
 
@@ -64,7 +64,7 @@ const TableOfContentsArea = styled('div')`
     display: block;
     margin-top: 3rem;
     position: sticky;
-    padding: 0 4rem;
+    padding: 0 0 0 2rem;
     top: 80px;
   }
 `

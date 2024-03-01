@@ -17,7 +17,7 @@ const Main = styled('main')`
   flex: 1;
   width: 100%;
   @media (min-width: md) {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
   }
 `
 

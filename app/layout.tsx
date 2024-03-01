@@ -48,7 +48,7 @@ const Html = styled('html')`
 `
 
 const Body = styled('body')`
-  max-width: 60rem;
+  max-width: 70rem;
   margin: 0 auto;
   padding: 0 1rem;
   font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック',
