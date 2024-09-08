@@ -1,40 +1,28 @@
-import { Box, HStack, styled } from '@kuma-ui/core'
+import { HStack, styled } from '@kuma-ui/core'
 import { format } from 'date-fns'
-import { JSDOM } from 'jsdom'
 import React, { FC } from 'react'
 import './style.css'
+import ReactMarkdown from 'react-markdown'
 import { TableOfContents } from '../../common/TableOfContent'
-import { PostOutput } from '@/apis/post/postApi'
-import { Tags } from '@/app/components/common/Tags'
-
-export const PostContent: FC<{ pageContent: PostOutput }> = ({ pageContent }) => {
-  const jsDom = new JSDOM(pageContent.content.rendered)
-  const titles = jsDom.window.document.querySelectorAll('h2')
-  titles.forEach((title, i) => {
-    title.id = `title-${i.toString()}`
-  })
+import { PostData } from '@/lib/posts'
+export const PostContent: FC<{ pageContent: PostData }> = ({ pageContent }) => {
   return (
     <article>
-      <h1>{pageContent.title.rendered}</h1>
-      <HStack alignItems='center' gap='8px'>
-        <time dateTime={pageContent.date} style={{ marginTop: '0px' }}>
-          {format(new Date(pageContent.date), 'yyyy/MM/dd')}
-        </time>
-        <Tags categoryIds={pageContent.categories} />
-      </HStack>
-      <TableOfContentArea>
-        <details>
-          <summary>目次</summary>
-          <TableOfContents textHtml={pageContent.content.rendered} />
-        </details>
-      </TableOfContentArea>
-      <Box
-        marginTop='2rem'
-        padding={['0 .8rem', '0 1rem']}
-        dangerouslySetInnerHTML={{
-          __html: `${jsDom.serialize()}`,
-        }}
-      />
+      <div>
+        <h1>{pageContent.title}</h1>
+        <HStack alignItems='center' gap='8px'>
+          <time dateTime={pageContent.date} style={{ marginTop: '0px' }}>
+            {format(new Date(pageContent.date), 'yyyy/MM/dd')}
+          </time>
+        </HStack>
+        <TableOfContentArea>
+          <details>
+            <summary>目次</summary>
+            <TableOfContents textHtml={pageContent.content} />
+          </details>
+        </TableOfContentArea>
+        <ReactMarkdown>{pageContent.content}</ReactMarkdown>
+      </div>
     </article>
   )
 }

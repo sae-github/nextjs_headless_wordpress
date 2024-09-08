@@ -2,6 +2,10 @@ body {
   color: #333;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-size: 1.8rem;
   margin: 0;
@@ -93,7 +97,7 @@ blockquote {
 
 blockquote::before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   width: 4px;
   height: 100%;
