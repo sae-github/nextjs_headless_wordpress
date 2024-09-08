@@ -1,8 +1,8 @@
 ---
-title: "JavaScriptでcsvダウンロード機能を実装した"
-date: "2023-10-25"
-categories: 
-  - "javascript"
+title: 'JavaScriptでcsvダウンロード機能を実装した'
+date: '2023-10-25'
+categories:
+  - 'javascript'
 ---
 
 業務先でJavaScriptでCSVダウンロード機能を実装する機会があり、[BlobAPI](https://developer.mozilla.org/ja/docs/Web/API/Blob)を初めて触った。この記事では、復習を兼ねて調べたことや実装をまとめておく。
@@ -29,7 +29,7 @@ https://stackblitz.com/edit/js-fjwru8?file=index.js
 Binary Large Object。バイトの塊を不透明な形で表したもの。[FileAPI](https://developer.mozilla.org/ja/docs/Web/API/File_API)はBlobインターフェイスを継承している。
 
 > **`Blob`** オブジェクトは blob、すなわち不変の生データであるファイルのようなオブジェクトを表します
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/API/Blob
 
 バイナリーデータを保持する様な役割を持つ。ブラウザがバイナリデータを内部的に保持する
@@ -51,22 +51,22 @@ const blob = new Blob(array, options)
 byte order mark。通称DOM。csvファイルがExcelで文字化けしないように文字コードをBOM付きにする必要がある。
 
 > プログラムがテキストデータを読み込む時、その先頭の数バイトからそのデータがUnicodeで表現されていること、また符号化形式（[エンコーディング](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0)）としてどれを使用しているかを判別できるようにしたものである。[\[1\]](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF#cite_note-1)
-> 
+>
 > https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF
 
 UTF-8の場合は0xEF 0xBB 0xBFを先頭につける必要がある。
 
 ```
-const bom = Uint8Array([0xEF,0xBB,0xBF]) 
+const bom = Uint8Array([0xEF,0xBB,0xBF])
 ```
 
 ### Unicodeとは
 
 > Unicode とは、世界の様々な言語、書式、記号に、番号を割り当てて定義した標準の[文字コード](https://developer.mozilla.org/ja/docs/Glossary/Character_set) です。一つ一つの[文字](https://developer.mozilla.org/ja/docs/Glossary/Character) に番号を割り当てることで、プログラマーは、どの言語が混ざっていても、コンピューターに保存、処理、伝送させるような[文字エンコーディング](https://developer.mozilla.org/ja/docs/Glossary/Character_encoding)を同じファイルやプログラムの中に作ることができます。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Glossary/Unicode
 
-文字コードとは、0と1の2進数しか扱えないコンピューターで文字を扱うためのに文字に対して割り振られた番号(ビット列)との関係をいう。(UTF-8やShift\_JISなどがこれに当たる)
+文字コードとは、0と1の2進数しか扱えないコンピューターで文字を扱うためのに文字に対して割り振られた番号(ビット列)との関係をいう。(UTF-8やShift_JISなどがこれに当たる)
 
 ![](/images/Tips-1-1024x576.jpg)
 
@@ -80,7 +80,7 @@ const bom = Uint8Array([0xEF,0xBB,0xBF])
 ## Uint8Array
 
 > **`Uint8Array`** は型付き配列で、 8 ビット符号なし整数値の配列を表します
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global\_Objects/Uint8Array
 
 ## まとめ

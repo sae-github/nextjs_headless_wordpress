@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題20】JSONデータからtableを作成する"
-date: "2022-01-20"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-6.jpg"
+title: '【もりけん塾 @JS課題20】JSONデータからtableを作成する'
+date: '2022-01-20'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-6.jpg'
 ---
 
 現在、もりけん塾で  
@@ -105,8 +105,8 @@ const createTable = usersData => {
 
 ### table headを作成する
 
-引数のitemsへはcreateTable()内で定義した table項目のオブジェクト(tableItems)です  
-  
+引数のitemsへはcreateTable()内で定義した table項目のオブジェクト(tableItems)です
+
 itemsの数だけloopをし、<th>を作成 テキストはitemsの値を入れ <thead>へ追加します  
 最終的にこの関数は 作成した <thead>を返します
 
@@ -141,13 +141,14 @@ const createTableBody = (usersData, keys) => {
   const tbody = document.createElement("tbody");
   usersData.forEach((userData) => {
     const tr = createElementWithClassName("tr", "js-tr-inTbody");
-    tbody.appendChild(tr).appendChild(createTd(userData, keys)); 
+    tbody.appendChild(tr).appendChild(createTd(userData, keys));
   });
   return tbody;
 };
 ```
 
-さらに、<tr>内に<td>を作成・追加します  
+さらに、<tr>内に<td>を作成・追加します
+
 <td>の作成はcreateTd(userData, keys)を実行します
 
 #### tdを作成する
@@ -156,8 +157,8 @@ const createTableBody = (usersData, keys) => {
 
 ![](/images/スクリーンショット-2022-01-21-17.01.06.png)
 
-keysにはcreateTable()で定義したtable項目のオブジェクトのkeyを格納した配列が渡ります  
-  
+keysにはcreateTable()で定義したtable項目のオブジェクトのkeyを格納した配列が渡ります
+
 keysの数だけloopし、userデータから値を取り出し<td>を作成します
 
 ```
@@ -207,9 +208,9 @@ keysを元に値を取り出すことで、対象のkeyに対する値が空の�
 今回の課題でレビューをくれた皆様ありがとうございました  
 thanks to [もなかさん](https://twitter.com/ruby443n) 、[にゃっつさん](https://twitter.com/nyattsu72)　、 [rikoさん](https://twitter.com/rikolog001)
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

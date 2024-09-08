@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾 @JS課題14-15】form要素の値の取得、バリデーション、分割代入"
-date: "2021-10-24"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-2-1.jpg"
+title: '【もりけん塾 @JS課題14-15】form要素の値の取得、バリデーション、分割代入'
+date: '2021-10-24'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-2-1.jpg'
 ---
 
 現在、もりけん塾で  
@@ -18,9 +18,9 @@ coverImage: "WebブラウザにWebサイトが表示までの旅へ-
 ## 課題15
 
 ①ボタンをクリックしたらモーダルが表示  
-②モーダル内のに_input\[type="number"\]_、 _input\[type="text"\]_ 、_input\[type="submit\]_ を設置  
+②モーダル内のに*input\[type="number"\]*、 _input\[type="text"\]_ 、_input\[type="submit\]_ を設置  
 （未入力の場合はアラートが発生）  
-③_input\[type="submit\]_をクリックするとリクエストがはしる  
+③*input\[type="submit\]*をクリックするとリクエストがはしる  
 ④入力された値はコンソールへ出力  
 ⑤fetchを使用しJSONデータを取得する  
 (データ取得の間はくるくるさせる)  
@@ -49,10 +49,9 @@ IDで要素を取得し、.valueとすることで値の取得ができました
 
 ## **バリデーション**
 
->   
 > **バリデーション**とは、入力されたデータが、あるいは[プログラミング言語](https://www.sophia-it.com/content/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)やマークアップ言語の記述が、規定された文法に即して、または[要求](https://www.sophia-it.com/content/%E8%A6%81%E6%B1%82)された仕様にそって、適切に記述されているかどうかを検証することである。
-> 
-> https://www.sophia-it.com/content/%E3%83%90%E3%83%AA%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3　　
+>
+> https://www.sophia-it.com/content/%E3%83%90%E3%83%AA%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3
 
 今回は、入力がなかった(空の)場合はリクエストができず  
 アラートが出る様なバリテーションをJavaScriptで実装しました
@@ -62,7 +61,7 @@ IDで要素を取得し、.valueとすることで値の取得ができました
 ```
   const inputName = document.getElementById("name").value;
   const inputNumber = document.getElementById("number").value;
-  
+
   if (inputName === "" || inputNumber === "") {
     alert("Name or number not entered. Please confirm.");
   } else {
@@ -122,7 +121,7 @@ trim()で両端の空白を取り除き(トリミングして)、変数へ格納
 
 変数名について
 
-trim()で空白を取り除いた値を、変数_trimInputName_ へ格納しましたが、  
+trim()で空白を取り除いた値を、変数*trimInputName* へ格納しましたが、  
 もりけん先生から _trimmedInputName_ がいいのでは..とレビュー頂きました  
 trim()した後の値を格納するので、過去形にする方が適切だと感じました！
 
@@ -142,7 +141,7 @@ HTMLの属性で制約をすることができ、_type_ 、_required_ 、_**patt
 <input type="number" name="number" id="number" required>
 ```
 
-###  type
+### type
 
 type属性を指定することで、指定したタイプに合わせて制御をしてくれる  
 今回のnumberであれば 数値しか入力できない様に 制御してくれる
@@ -218,7 +217,7 @@ console.log(a, b);                         //output  山田  1
 ( . . . )を使用する
 
 ```
-({name, number} = {name: "山田", number: 1}); 
+({name, number} = {name: "山田", number: 1});
 ```
 
 #### デフォルト値と新しい変数の追加
@@ -308,9 +307,9 @@ https://blog.greenroots.info/a-practical-guide-to-object-destructuring-in-javasc
 学んだ点を自分で調べ 自分のコードに落とし込むことができ、より課題に向き合えたと感じました。  
 引き続き、課題もレビューも頑張りたいです
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

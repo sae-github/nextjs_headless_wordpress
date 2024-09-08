@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾】言語チャレンジ@配列内の隣合う値を足し算する"
-date: "2022-01-08"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "新型コロナ-1-scaled.jpg"
+title: '【もりけん塾】言語チャレンジ@配列内の隣合う値を足し算する'
+date: '2022-01-08'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: '新型コロナ-1-scaled.jpg'
 ---
 
 もりけん塾で新たに追加された課題....「 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) 」に取り組んでいます。
@@ -59,7 +59,7 @@ loopの条件は `i < input.length - 1` としました
 
 ```
 let result = [];
-for (let i = 0; i < input.length - 1; i++) { 
+for (let i = 0; i < input.length - 1; i++) {
   result[i] = input[i] + input[++i];
 }
 console.log(result);
@@ -82,7 +82,7 @@ const f = (parma) => {
      }
  });
 }
-console.log(f(input)); 
+console.log(f(input));
 // output  [3, 6, 14, 22, undefined]
 ```
 
@@ -126,9 +126,9 @@ console.log(f(input));
 
 以上です
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

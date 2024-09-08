@@ -1,18 +1,17 @@
 ---
-title: "【もりけん塾 @JS課題36】無限スクロールの実装"
-date: "2022-04-11"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-15-2.png"
+title: '【もりけん塾 @JS課題36】無限スクロールの実装'
+date: '2022-04-11'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-15-2.png'
 ---
 
-  
 現在、もりけん塾で  
 [マークアップエンジニアの方がフロントエンドエンジニアになる為の課題](https://github.com/kenmori/handsonFrontend/blob/master/work/markup/1.md)に取り組んでいます！  
 今回は課題36の実装で学んだこと、実装のポイントをブログへまとめます
@@ -84,7 +83,7 @@ init();
 const intersectHandler = ([entry]) => {
   if (!entry.isIntersecting) return;
   // 監視を停止
-  observeConfig.stopObserve(entry.target);   
+  observeConfig.stopObserve(entry.target);
   const articleItems = document.querySelectorAll(".article__item");
   // 表示中の記事数がデータの総数より少なければ、リクエスト→記事取得・追加を行う
   if (articleItems.length < post.total) {
@@ -124,21 +123,21 @@ const endpointConfig = {
 レビューで教えて頂いた`getter`を使用し、endpointを取得する際には  
 パラメーターがセットされたURLが返る様にしました
 
-また、リクエストに応じてオブジェクト内のcurrentPageを更新します  
-  
+また、リクエストに応じてオブジェクト内のcurrentPageを更新します
+
 データを無事取得したら、データを加工し、DOMへ挿入します。  
 また、その後は`startObserve`を実行しtarget要素へは表示中の最後の記事を指定してしました
 
 ```
 const getArticleDataAndUpdate = async () => {
   // currentPageを更新
-  ++endpointConfig.currentPage;  
+  ++endpointConfig.currentPage;
   //　データを取得
-  const articleData = await getArticleData(endpointConfig.endpoint); 
+  const articleData = await getArticleData(endpointConfig.endpoint);
   removeLoading();
   if (articleData) {
 　　　　　　　// レンダリング
-    renderArticleItems(articleData.data); 
+    renderArticleItems(articleData.data);
     // 監視開始
     observeConfig.startObserve(articleList.lastElementChild, intersectHandler);
   }
@@ -148,18 +147,18 @@ const getArticleDataAndUpdate = async () => {
 ## まとめ
 
 この課題は、私から先生へリクエストさせて頂き 追加してもらった課題です。  
-実装してみたかった無限スクロールを課題に取り入れてくださりありがとうございます。  
-  
+実装してみたかった無限スクロールを課題に取り入れてくださりありがとうございます。
+
 今回の実装では 持っておきたい値がいくつかあった事もあり、  
 オブジェクトにまとめ見通しがよくなるように意識しました。  
 また、スクロールを何度もされた場合にバグが起きない様にするのに苦戦しました  
-交差の監視を停止したりすることで解決し、学びになりました。  
-  
+交差の監視を停止したりすることで解決し、学びになりました。
+
 今回も塾生の皆さんにレビューや動作の確認をして頂きました。ありがとうございました！
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

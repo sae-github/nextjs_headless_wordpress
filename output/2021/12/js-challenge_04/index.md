@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾】言語チャレンジ@カウントダウンの方法を考える"
-date: "2021-12-23"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-4-1.jpg"
+title: '【もりけん塾】言語チャレンジ@カウントダウンの方法を考える'
+date: '2021-12-23'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-4-1.jpg'
 ---
 
 もりけん塾で新たに追加された課題....「 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) 」に取り組んでいます。
@@ -56,7 +56,7 @@ loopでできそう...
 
 > オペランドに後置で演算子を付けると (例えば、 `x++`) 、インクリメント演算子はインクリメントしますが、インクリメント前の値を返します。  
 > オペランドに前置で演算子を付けると (例えば、 `++x`) 、インクリメント演算子はインクリメントし、インクリメント後の値を返します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Increment
 
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Decrement
@@ -146,9 +146,9 @@ https://launchschool.com/books/javascript/read/loops\_iterating
 
 https://www.section.io/engineering-education/javascript-iterations-which-one-is-faster/
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

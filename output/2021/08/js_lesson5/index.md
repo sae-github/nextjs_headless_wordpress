@@ -1,13 +1,13 @@
 ---
-title: "【もりけん塾】JS課題5  非同期処理・Promise"
-date: "2021-08-13"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "23.png"
+title: '【もりけん塾】JS課題5  非同期処理・Promise'
+date: '2021-08-13'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: '23.png'
 ---
 
 もりけん塾で「[マークアップエンジニアの方がフロントエンドエンジニアになる為の課題」](https://github.com/sae-github/handsonFrontend/blob/master/work/markup/1.md)に取り組みました。  
@@ -20,7 +20,7 @@ coverImage: "23.png"
 
 ```
 [
-{to: "bookmark.html", img: "1.png", alt:"画像1", text: "ブックマーク"}, 
+{to: "bookmark.html", img: "1.png", alt:"画像1", text: "ブックマーク"},
 {to: "message.html", img: "2.png", alt:"画像2", text: "メッセージ"}
 ]
 ```
@@ -61,11 +61,11 @@ https://azu.github.io/promises-book/#then-return-new-promise
 ## 同期処理と非同期処
 
 - 同期処理　  
-    順番に処理を行う。前の処理が完了するまで次の処理には進まない。
+   順番に処理を行う。前の処理が完了するまで次の処理には進まない。
 
 - 非同期処理  
-    処理を、別で実行させつつ完了を待たずに次の処理へいく。  
-    
+   処理を、別で実行させつつ完了を待たずに次の処理へいく。  
+
 
 なぜ非同期処理が必要なのか
 
@@ -82,7 +82,7 @@ https://coliss.com/articles/build-websites/operation/javascript/javascript-visua
 ### Promiseとは
 
 > **`Promise`** オブジェクトは非同期処理の最終的な完了処理 (もしくは失敗) およびその結果の値を表現します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global\_Objects/Promise
 
 例えを用いてこの言葉の意味を理解していきます...
@@ -108,8 +108,8 @@ new Promise((resolve,reject) => {
 
 getDate(本来であれば何かデータを取得してくる様な関数)がtrue(データの取得に成功したら)  
 resolve()が実行されthen()に処理が移ります。  
-仮にgateDateがfalse(データの取得に失敗)の場合は、reject()が実行され、エラーとなりました。  
-  
+仮にgateDateがfalse(データの取得に失敗)の場合は、reject()が実行され、エラーとなりました。
+
 ちょっとわかったぞ...
 
 ### Promiseの書き方
@@ -129,7 +129,7 @@ new Promise(function(resolve,reject) {　　　
 
 //アロー関数を使用して書くと
 new Promise((resolve,reject) => {
-  
+
 }).then(() => {
 
 }).catch(() => {
@@ -188,17 +188,17 @@ const promise = new Promise((resolve) => {
 Promiseの本では以下の様にありました
 
 > **Promiseは常に非同期** で処理されるということが仕様で定められている
-> 
+>
 > https://azu.github.io/promises-book/#then-return-new-promise
 
 以下の様な例で確認してみると、しっくりきました。
 
 ```
 new Promise((resolve) => {
-  console.log(1); 
+  console.log(1);
   resolve(2);
 }).then((value) => {
-  console.log(value); 
+  console.log(value);
 });
 console.log(3);
 
@@ -228,7 +228,7 @@ const promise = new Promise((resolve) => {
 ```
 
 thenの後に続く処理と分けて書く場合などは必要ですが  
-今回の様に一緒に書いている場合は確かに不要だと思いました。  
+今回の様に一緒に書いている場合は確かに不要だと思いました。
 
 もりけん先生、今回もレビューをありがとうございました。
 
@@ -300,11 +300,11 @@ new Promise((resolve) => {
 ## まとめ
 
 Promiseや非同期処理についての記事がたくさんありました。  
-それほどつまずきポイントなんだと思いました...  
+それほどつまずきポイントなんだと思いました...
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

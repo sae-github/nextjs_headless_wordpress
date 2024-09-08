@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】JS課題13 addEventListener/ モーダルウィンドウ / fetch"
-date: "2021-10-10"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-2-1.jpg"
+title: '【もりけん塾】JS課題13 addEventListener/ モーダルウィンドウ / fetch'
+date: '2021-10-10'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-2-1.jpg'
 ---
 
 現在、もりけん塾で  
@@ -66,7 +66,7 @@ addEventListenerの第三引数にtrueを指定すると、
 
 ```
 document.getElementById('js-button').addEventListener('click', () => {
-  alert("button"); 
+  alert("button");
 },true);
 ```
 
@@ -98,9 +98,9 @@ https://blog.bitsrc.io/event-bubbling-and-capturing-in-javascript-6bc908321b22
 
 https://ja.javascript.info/introduction-browser-events
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

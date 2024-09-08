@@ -1,11 +1,11 @@
 ---
-title: "【もりけん塾】フローティングアイテム/スムーススクロール"
-date: "2021-07-21"
-categories: 
-  - "javascript"
-tags: 
-  - "morikenjuku"
-coverImage: "印刷しやすい-シンプルなフォルダー-ラベル-1-1.png"
+title: '【もりけん塾】フローティングアイテム/スムーススクロール'
+date: '2021-07-21'
+categories:
+  - 'javascript'
+tags:
+  - 'morikenjuku'
+coverImage: '印刷しやすい-シンプルなフォルダー-ラベル-1-1.png'
 ---
 
 今回の内容はもりけん塾で取り組んだ課題の学習ログです。  
@@ -69,7 +69,7 @@ JavaScript本格入門では以下の様に書かれていました。
 > querySelector/querySelectorAllメソッドは高機能なメソッドですが、getElementBy\*\*メソッドに比べると低速です。  
 > //省略  
 > 特に、getElementByIdメソッドは高速なので、それでまかなえる時はできるだけid値で検索することをおすすめします。
-> 
+>
 > JavaScript本格入門
 
 まとめると、、、
@@ -104,13 +104,13 @@ IntersectionObserverを使用する理由を先生が教えてくれました。
 スクロールイベントはユーザーがスクロールする度に計算される為、パフォーマンスが悪いそうです。  
 以下の動画を見ればわかる通り、スクロールするたびにwindow.pageYOffset;で値を取得し続けています。
 
-[![Image from Gyazo](/images/e7f9464afff7c0dd0b9a1f5b2cc0d9d1.gif)](https://gyazo.com/e7f9464afff7c0dd0b9a1f5b2cc0d9d1) 
+[![Image from Gyazo](/images/e7f9464afff7c0dd0b9a1f5b2cc0d9d1.gif)](https://gyazo.com/e7f9464afff7c0dd0b9a1f5b2cc0d9d1)
 
 その点、intersectionObserverは要素が交差したタイミングで発火する為、  
 より良いパフォーマンスが発揮できます。
 
 > Intersection Observer API (交差監視 API) は、ターゲットとなる要素が、祖先要素もしくは文書の最上位の[ビューポート](https://developer.mozilla.org/ja/docs/Glossary/Viewport)と交差する変更を非同期的に監視する方法を提供します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/API/Intersection\_Observer\_API
 
 以下、先生のアドバイスを元に書き直したコードです(先生に修正もして頂きました...)
@@ -175,11 +175,11 @@ currentTargetプロパテではイベントを**登録した対象の要素**を
 
 ```
 //id="js-global-nav-list"を持つulを変数に格納
-const globalNav = document.getElementById('js-global-nav-list'); 
+const globalNav = document.getElementById('js-global-nav-list');
 
 globalNav.addEventListener('click', function (e) {
 //子要素であるliを指す
-    console.log(e.target); 
+    console.log(e.target);
 //id="js-global-nav-list"を持つul
     console.log(e.currentTarget);　
   });
@@ -201,7 +201,7 @@ globalNav.addEventListener('click', function (e) {
 Application Programming Interface
 
 > 開発者が複雑な機能をより簡単に作成できるよう、プログラミング言語から提供される構造です。複雑なコードを抽象化し、それにかわる簡潔な構文を提供します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Learn/JavaScript/Client-side\_web\_APIs/Introduction
 
 https://developer.mozilla.org/ja/docs/Learn/JavaScript/Client-side\_web\_APIs/Introduction
@@ -222,7 +222,7 @@ DOMはこれらのノードを抽出・置換・追加などをするための�
 イベントをトリガーとして処理を実行する際に、  
 そのイベントに対しての処理内容を定義したコードのかたまり(関数)のこと。
 
-* * *
+---
 
 以上です。
 
@@ -230,9 +230,9 @@ DOMはこれらのノードを抽出・置換・追加などをするための�
 課題と向き合い、レビューを頂く度に自分の課題がより浮き彫りになります。。。  
 今はひとつひとつの課題に丁寧に、根気強く(ここ大事)、向き合って行きたいと思います。
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

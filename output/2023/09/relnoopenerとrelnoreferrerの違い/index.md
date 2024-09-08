@@ -1,6 +1,6 @@
 ---
-title: "rel=”noopener”とrel=”noreferrer”の違い"
-date: "2023-09-10"
+title: 'rel=”noopener”とrel=”noreferrer”の違い'
+date: '2023-09-10'
 ---
 
 ## 概要
@@ -15,10 +15,10 @@ aタグに`ref=noopener`を指定するとESLintで怒られたので改めて�
 
 ### ルールの詳細
 
-> This rule aims to prevent user generated link hrefs and form actions from creating security vulnerabilities by requiring `rel='noreferrer'` for external link hrefs and form actions, and optionally any dynamically generated link hrefs and form actions.  
->   
+> This rule aims to prevent user generated link hrefs and form actions from creating security vulnerabilities by requiring `rel='noreferrer'` for external link hrefs and form actions, and optionally any dynamically generated link hrefs and form actions.
+>
 > DeepL) このルールは、外部リンクとフォームアクション、およびオプションで動的に生成されるリンクとフォームアクションに rel='noreferrer' を要求することで、ユーザが生成したリンク href とフォームアクションがセキュリティの脆弱性を生み出すのを防ぐことを目的としています。
-> 
+>
 > https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
 
 現在の主要ブラウザでは自動的に`ref=noopener`が設定されているためIE等のレガシーブラウザのサポートが必要ない場合はこの設定は**不要**になる。
@@ -70,7 +70,7 @@ window.openerを使用して遷移元のwindowオブジェクトにアクセス�
 #### Refererとは
 
 > **`Referer`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `Referer` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Referer
 
 ##### 参考

@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾】言語チャレンジ@配列同士で一致した値を格納した配列を返す"
-date: "2022-01-20"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-5.jpg"
+title: '【もりけん塾】言語チャレンジ@配列同士で一致した値を格納した配列を返す'
+date: '2022-01-20'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-5.jpg'
 ---
 
 もりけん塾で新たに追加された課題....「 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) 」に取り組んでいます。
@@ -114,7 +114,7 @@ console.log(result3);
 
 ## filter + indexOf
 
-indexOfを使用したverもやってみる  
+indexOfを使用したverもやってみる
 
 indexOfメソッドは 引数の値が 指定した配列内にあれば 一致した最初のindexを返してくれる。その特性を使って、indexOfが返すindexと現在のindexが一致しなければ、重複しているということになるので、それを条件にfilterする
 
@@ -137,9 +137,9 @@ console.log(result3);
 //  [2, 6]
 ```
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

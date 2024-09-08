@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】JS課題7 Promise / Loading"
-date: "2021-08-29"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "21.png"
+title: '【もりけん塾】JS課題7 Promise / Loading'
+date: '2021-08-29'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: '21.png'
 ---
 
 ## 課題7
@@ -16,7 +16,7 @@ coverImage: "21.png"
 > resolveになるまでの間にloading画像をだして、終わったら除く。  
 > これはサーバーから値が渡ってくるまではそれを出して、  
 > 渡ってきたら値を加工してhtmlとして書き出すを想定しています
-> 
+>
 > https://github.com/kenmori/handsonFrontend/blob/master/work/markup/1.md
 
 ## レビュー前のコード
@@ -95,7 +95,7 @@ createList().then((lists) => {
 また、関数にする理由を教えてくださいました  
 ・テストをするため  
 ・仕様変更に対応  
-・コードの読みやすさの向上  
+・コードの読みやすさの向上
 
 レビュー後のコードを見ると  
 とてもスッキリしていて、わかり易いです。  
@@ -158,9 +158,9 @@ getData().then((lists) => {
 
 おお...見返したくなるコードが書けた気がします。嬉しい！
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

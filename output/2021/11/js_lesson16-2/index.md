@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題16】 WebAPIを使用した 動的なタブUIを作る part2"
-date: "2021-11-22"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-3-1.jpg"
+title: '【もりけん塾 @JS課題16】 WebAPIを使用した 動的なタブUIを作る part2'
+date: '2021-11-22'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-3-1.jpg'
 ---
 
 現在、もりけん塾で  
@@ -18,8 +18,8 @@ coverImage: "WebブラウザにWebサイトが表示までの旅へ-
 
 ## 課題16
 
-[yahooのトップページ](https://www.yahoo.co.jp/)にある様なタブUIを作成しました  
-  
+[yahooのトップページ](https://www.yahoo.co.jp/)にある様なタブUIを作成しました
+
 前回のPRでは JSONデータを作成、fetchで取得、タブ・コンテンツを作成し DOMへ追加 を行いました。  
 今回はそこにいくつかの機能の追加を行いました。
 
@@ -27,7 +27,6 @@ coverImage: "WebブラウザにWebサイトが表示までの旅へ-
 
 https://itosae.com/js\_lesson16/
 
-  
 以下、今回のPRで含んでいる仕様です
 
 ☑︎ 記事にはそれぞれコメントがあり、0件なら表示しない、1以上ならアイコンと共に数字が表示される  
@@ -50,10 +49,10 @@ https://codesandbox.io/s/js-lesson16-part3-d2m4e
 
 ## 3日以内かどうかを識別する
 
-date-fnsを使用し、APIで取得したデータが 3日以内かどうかを割り出しました  
-  
+date-fnsを使用し、APIで取得したデータが 3日以内かどうかを割り出しました
+
 まずは使用する関数をimportしました  
-形式を指定できる関数_format_ と、指定した日付間の日数を返す_differenceInCalendarDays_ を使用しました
+形式を指定できる関数*format* と、指定した日付間の日数を返す*differenceInCalendarDays* を使用しました
 
 ```
 import { format, differenceInCalendarDays } from 'date-fns'
@@ -64,10 +63,10 @@ import { format, differenceInCalendarDays } from 'date-fns'
 ```
 function isSpecifiedPeriod(date) {　　　　　　
   const newArrivalDays = 3;　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-  const today = format(new Date(), 'yyyy,MM,dd');          
+  const today = format(new Date(), 'yyyy,MM,dd');
   const articleDate = format(new Date(date), 'yyyy,MM,dd');　　
   const periodOfDays = differenceInCalendarDays(new Date(today), new  Date(articleDate)) ;
-  const result = periodOfDays <= newArrivalDays;   
+  const result = periodOfDays <= newArrivalDays;
   return result;
 }
 ```
@@ -87,7 +86,7 @@ https://blog.bitsrc.io/date-fns-vs-momentjs-9833f7463751
 コメントがあれば、コメント数とアイコンを追加する条件式
 
 ```
-const commentLength = article[i].comment.length;    //コメントの数を変数へ 
+const commentLength = article[i].comment.length;    //コメントの数を変数へ
 if (hasComment(commentLength)) {　　
       addCommentLength(commentLength, metaWrapper);
     }
@@ -106,7 +105,7 @@ function hasComment(commentLength) {
 
 ```
  // コメント数と追加先の親要素を引数に
-function addCommentLength(commentLength, parent) {    
+function addCommentLength(commentLength, parent) {
 
 　 const commentWrapper = createElementWithClass("span", "comment-length");
   const commentIcon = createElementWithClass("img", "comment-icon");
@@ -135,9 +134,9 @@ idは唯一の値なので、被ることがないと考えました
 function setClickEventInCommentIcon(target) {
   target.addEventListener("click", async (e) => {
 // モーダルと背景を表示
-   openModalAndOverLay();          
+   openModalAndOverLay();
 // コメント内容を追加したい先
-    const toAppendElement = document.getElementById("js-modal-inner");   
+    const toAppendElement = document.getElementById("js-modal-inner");
     const targetParentId = e.currentTarget.closest("li").id;
 // コメントデータ取得　　　　　　　　　　　　　　　　　　　　　　　
     const commentData = await getComment(targetParentId,toAppendElement);
@@ -208,9 +207,9 @@ function createElementWithClass(type, name) {
 
 次の課題も頑張ります！
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

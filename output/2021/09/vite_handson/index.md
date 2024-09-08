@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】viteハンズオン勉強会"
-date: "2021-09-01"
-tags: 
-  - "javascript"
-  - "vite"
-  - "プログラミング"
-  - "morikenjuku"
-  - "勉強会"
-  - "学習記録"
-coverImage: "印刷しやすい-シンプルなフォルダー-ラベル-9-1.png"
+title: '【もりけん塾】viteハンズオン勉強会'
+date: '2021-09-01'
+tags:
+  - 'javascript'
+  - 'vite'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '勉強会'
+  - '学習記録'
+coverImage: '印刷しやすい-シンプルなフォルダー-ラベル-9-1.png'
 ---
 
 8月22日にもりけん塾でviteハンズオン勉強会がありました！  
@@ -31,10 +31,10 @@ https://vitejs.dev/
 ### 特徴
 
 > Vite.js pre-bundles the [dependencies](https://vitejs.dev/guide/dep-pre-bundling.html) with `esbuild` 10 to 100 times faster than JavaScript-based bundlers. It serves the source code over [native ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and lets the browser do the job of bundler. It only transforms the source code on demand whenever the browser requests it. Then, it bundles the code with [Rollup](https://rollupjs.org/) for production.
-> 
+>
 > //DeepL使用  
 > Vite.jsは、JavaScriptベースのバンドルラーよりも10～100倍高速にesbuildで依存関係を事前にバンドルします。Vite.jsはソースコードをネイティブのESMで提供し、ブラウザにバンドルラーの仕事をさせます。ブラウザがソースコードを要求したときだけ、必要に応じてソースコードを変換します。その後、Rollupでコードをバンドルして本番に臨みます。
-> 
+>
 > https://medium.com/habilelabs/introducing-vite-js-an-opinionated-frontend-build-tool-484385701245
 
 https://medium.com/habilelabs/introducing-vite-js-an-opinionated-frontend-build-tool-484385701245
@@ -63,7 +63,7 @@ https://github.com/kenmori/handsonFrontend/blob/master/vite/Work.md
 
 ```
 // プロジェクトネーム(デフォルトはvite-project)
-? Project name: ›　  
+? Project name: ›　
 
 //テンプレートの選択
 ? Select a framework: › - Use arrow-keys. Return to submit.　
@@ -85,7 +85,7 @@ https://github.com/kenmori/handsonFrontend/blob/master/vite/Work.md
 
 ### npm i
 
-package-lock.jsonとnode\_modulesが生成
+package-lock.jsonとnode_modulesが生成
 
 ```
 % npm i
@@ -231,9 +231,9 @@ Settings→Pages→URLをクリック
 
 ありがとうございました。
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

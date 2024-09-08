@@ -1,15 +1,15 @@
 ---
-title: "【Codewars】pangramの検出"
-date: "2022-09-07"
-categories: 
-  - "codewars"
-  - "javascript"
-tags: 
-  - "codewars"
-  - "javascript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-25.png"
+title: '【Codewars】pangramの検出'
+date: '2022-09-07'
+categories:
+  - 'codewars'
+  - 'javascript'
+tags:
+  - 'codewars'
+  - 'javascript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-25.png'
 ---
 
 毎日[codewars](https://www.codewars.com/)に取り組んでいます！
@@ -20,7 +20,7 @@ coverImage: "Twitter-post-25.png"
 ## pangramとは
 
 > **パングラム** (_pangram_) は、[アルファベット](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%99%E3%83%83%E3%83%88)を使用する[言葉遊び](https://ja.wikipedia.org/wiki/%E8%A8%80%E8%91%89%E9%81%8A%E3%81%B3)である。[ギリシア語](https://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%AA%E3%82%B7%E3%82%A2%E8%AA%9E)で「すべての文字」という意味がある通り、すべての文字（26個のアルファベット）を使い文章を作るのが目的である。
-> 
+>
 > https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%A0
 
 ## Let's Challenge

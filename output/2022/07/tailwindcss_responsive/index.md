@@ -1,15 +1,15 @@
 ---
-title: "TailwindCSSでレスポンシブな実装をやってみる"
-date: "2022-07-18"
-categories: 
-  - "css"
-tags: 
-  - "css"
-  - "tailwindcss"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-18.png"
+title: 'TailwindCSSでレスポンシブな実装をやってみる'
+date: '2022-07-18'
+categories:
+  - 'css'
+tags:
+  - 'css'
+  - 'tailwindcss'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-18.png'
 ---
 
 今回はtailwindCSSを使用してレスポンシブなレイアウトやstyleの実装をやってみます  
@@ -142,9 +142,9 @@ https://tailwindcss.com/docs/preflight
 まだ見慣れなさもあるのですが、クラス名の悩みからは解放されそうです。  
 今後もtailwindCSSを触りつつ、また学んだことはブログで更新していこうと思います。
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

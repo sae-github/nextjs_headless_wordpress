@@ -1,6 +1,6 @@
 ---
-title: "TypeScriptでfilterを型安全に使う方法を調べた記録"
-date: "2024-02-27"
+title: 'TypeScriptでfilterを型安全に使う方法を調べた記録'
+date: '2024-02-27'
 ---
 
 お馴染みのネタかもしれないけれど、自分なりに調べたことをまとめておく
@@ -39,9 +39,8 @@ filterの型定義は下記のようになっていた。返り値が`T[]`、つ
 ここで[敗北者のTypeScript](https://qiita.com/uhyo/items/aae57ba0734e36ee846a)の一文を引用します。
 
 > - TypeScriptで`--strict`を使わない人や、`any`とか`as`を濫用する人は敗北者です。
-> 
 > - これらを使っていいのはあなたがTypeScriptよりも賢くて真にそれが必要だと分かっている場合だけです。
-> 
+>
 > 敗北者のTypeScript https://qiita.com/uhyo/items/aae57ba0734e36ee846a
 
 ## isを使う
@@ -50,7 +49,7 @@ filterの型定義は下記のようになっていた。返り値が`T[]`、つ
   const nullableArray = ["ほげほげ", null, "ふぁふぁ", null, 100];
   const filteredArray = nullableArray.filter((item):item is string => {
     return item !== null
-  }) 
+  })
 ```
 
 `is`演算子で型ガードを行い、`(string | number)[]`に絞り込む  
@@ -69,7 +68,7 @@ filterの型定義は下記のようになっていた。返り値が`T[]`、つ
   const nullableArray = ["ほげほげ", null, null, null, 100];
   const filteredArray = nullableArray.filter((item):item is NonNullable<typeof item> => {
     return item !== null
-  })  // (string | number)[] 
+  })  // (string | number)[]
 ```
 
 どちらにせよ実装を保証するテストも一緒にあると安全に近づくと言えそう。。。
@@ -82,7 +81,7 @@ filterの型定義は下記のようになっていた。返り値が`T[]`、つ
  const nullableArray = ['ほげほげ', null, null, null, 100];
   const filteredArray = nullableArray.flatMap((item) => {
     return item ?? [];
-  });   // (string | number)[] 
+  });   // (string | number)[]
 ```
 
 [【TypeScript】配列の型を絞り込むときはflatMapがおすすめ](https://zenn.dev/spacemarket/articles/51613197db688d)

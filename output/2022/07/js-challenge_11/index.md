@@ -1,18 +1,18 @@
 ---
-title: "【もりけん塾】言語チャレンジ@配列内の重複した値を取り除く"
-date: "2022-07-29"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-11.jpg"
+title: '【もりけん塾】言語チャレンジ@配列内の重複した値を取り除く'
+date: '2022-07-29'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-11.jpg'
 ---
 
-* * *
+---
 
 もりけん塾の課題 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) に取り組んでいます！
 
@@ -68,6 +68,6 @@ https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a
 https://qiita.com/netebakari/items/7c1db0b0cea14a3d4419
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

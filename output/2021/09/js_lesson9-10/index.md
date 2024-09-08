@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】JS課題9•10 async / await , try...catch...finally"
-date: "2021-09-19"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "印刷しやすい-シンプルなフォルダー-ラベル-1-2.png"
+title: '【もりけん塾】JS課題9•10 async / await , try...catch...finally'
+date: '2021-09-19'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: '印刷しやすい-シンプルなフォルダー-ラベル-1-2.png'
 ---
 
 現在、もりけん塾で  
@@ -31,14 +31,14 @@ https://itosae.com/js\_lesson07/
 #### async
 
 > Async Functionとは非同期処理を行う関数を定義する構文です。 Async Functionは通常の関数とは異なり、必ず`Promise`インスタンスを返す関数を定義する構文です。
-> 
+>
 > https://azu.github.io/promises-book/#chapter5-async-function
 
 ```
 async function fn() {
   return ("こんにちは");
 }
-console.log(fn()); 
+console.log(fn());
 ```
 
 確認するとPromiseインスタンスを返していて、  
@@ -190,8 +190,8 @@ fetchData();
 // Uncaught Error: Error
 ```
 
-この様な結果になった理由を考えました。  
-  
+この様な結果になった理由を考えました。
+
 まずPromise内でエラーが投げられた場合の状態を確認しました。
 
 ![](/images/スクリーンショット-2021-09-17-23.32.24.png)
@@ -201,7 +201,7 @@ catchへ処理が移行し「undefinedエラーが発生しました！」が出
 
 ![わたし<br>](/images/animal_mark06_uma-150x150.png)
 
-わたし  
+わたし
 
 Errorが投げられたら自然とrejectedな状態になるんじゃないの???
 
@@ -231,9 +231,8 @@ fetchData();
 
 ここの挙動がいまいちよくわからず、苦しみました...
 
-  
 try...catchは同期的な例外をcatchするためsetTimeout内で発生した例外は、  
-非同期のためcatchできない、ということではないかと考えました。  
+非同期のためcatchできない、ということではないかと考えました。
 
 ### 課題で苦戦した点
 
@@ -263,7 +262,7 @@ tryに処理を詰め込みすぎないことは重要だと学びました。
 また以下の記事も参考になりました。
 
 > トライ・キャッチは、エラーが発生する可能性がある場合に実装されるべきです。例えば、外部サービスが利用できない場合、ログイン認証が無効な場合、ユーザーの入力が無効な場合などです。可能な限り、特定のエラーをキャッチするように努めるべきです。
-> 
+>
 > https://www.codemag.com/article/1807021/JavaScript-Corner-Try-Catch
 
 エラーにはプログラマーのミス(変数の未定義や、引数の渡し忘れなど)とユーザーのミスがあり  
@@ -283,9 +282,9 @@ https://web.archive.org/web/20171227042008/https://qiita.com/gaogao\_9/items/40b
 
 https://itnext.io/error-handling-with-async-await-in-js-26c3f20bc06a
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

@@ -1,13 +1,13 @@
 ---
-title: "【もりけん塾】JS課題11 fetchを使用し、JSONデータを取得する"
-date: "2021-09-28"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-1-1.png"
+title: '【もりけん塾】JS課題11 fetchを使用し、JSONデータを取得する'
+date: '2021-09-28'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-1-1.png'
 ---
 
 現在、もりけん塾で  
@@ -78,9 +78,9 @@ Responseオブジェクトにはリクエストに対するレスポンスが格
 `json`メソッドを使用し、JSONデータを取得します。
 
 > インターフェイス の**`json()`**メソッドは[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request)リクエストの本文を読み取り、本文のテキストを[`JSON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)。として解析した結果で解決されるPromiseとして返します。
-> 
+>
 > メソッドに名前が付けられているにもかかわらず、`json()`結果はJSONではなく、JSONを入力として受け取り、それを解析してJavaScriptオブジェクトを生成した結果であることに注意してください。
-> 
+>
 > https://developer.mozilla.org/en-US/docs/Web/API/Request/json
 
 ```
@@ -104,7 +104,7 @@ length: 2
 ## fetchのエラー処理
 
 > promise は `fetch` が HTTP リクエストを作るすることができなかった場合、例えば ネットワークの問題やそのようなサイトがない場合に reject します。404 や 500 のような HTTP エラーも通常のフローとみなされます。
-> 
+>
 > https://ja.javascript.info/fetch
 
 `try...catch`と`if文`を使用し、ステータスコードが2xx(リクエストの成功を意味する)以外の場合は  
@@ -134,8 +134,8 @@ getData()
 今回の課題で実装したいことは以下の内容です
 
 ・HTTP通信が成功場合、jsonメソッドを使用しJSONデータを読み込む  
-失敗した場合は例外を投げ、ブラウザに「サーバーエラーです」と表示させる  
-  
+失敗した場合は例外を投げ、ブラウザに「サーバーエラーです」と表示させる
+
 ・サーバーから受け取ったデータが  
 意図したものでなければブラウザに「適切なデータがありませんでした」と表示する  
 意図したものであれば、加工し、ブラウザに表示させる
@@ -160,7 +160,7 @@ async function getData() {
   }
 }
 
-async function createLists() {          
+async function createLists() {
   const responseData = await getData();  // ❶ getDataの結果を待ってから実行する
   if (responseData.data) {　　　　　　　　　　// responseData.dataが未定義だとエラーがでる
     console.log(responseData.data);
@@ -206,8 +206,8 @@ fulfilledの為catchできなかった....
 
 わたし
 
-なぜgetDataで例外が発生したのに、rejectではなく、fulfilledなんだ  
-  
+なぜgetDataで例外が発生したのに、rejectではなく、fulfilledなんだ
+
 エラーが発生した場合は何もreturnしていないから....？  
 try...catchしているから？
 
@@ -220,7 +220,7 @@ try...catchしているから？
 async function getData() {
   const response = await fetch("URL");　　// 　HTTP通信開始、Responseを変数へ格納
   if (!response.ok) {　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　// 　通信が成功しなかったら例外を投げる
-    throw new Error(response.statusText);　　    
+    throw new Error(response.statusText);　　
   } else {
     const json = await response.json();
     return json;
@@ -245,7 +245,7 @@ async function tryCreate() {　　
 ## まとめ
 
 エラーハンドリング、非同期処理はまだまだ奥が深いなぁと感じました。  
-ちょっと実践的になるだけで、わからなくなって焦ります....  
+ちょっと実践的になるだけで、わからなくなって焦ります....
 
 今回の課題のコードは↓
 
@@ -254,9 +254,9 @@ async function tryCreate() {　　
 
 レビューはもりた先生にして頂きました。ありがとうございました。
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

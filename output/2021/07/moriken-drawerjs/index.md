@@ -1,11 +1,11 @@
 ---
-title: "【もりけん塾】ドロワーメニュー/ハンバーガーボタン"
-date: "2021-07-11"
-categories: 
-  - "javascript"
-tags: 
-  - "morikenjuku"
-coverImage: "印刷しやすい-シンプルなフォルダー-ラベル.png"
+title: '【もりけん塾】ドロワーメニュー/ハンバーガーボタン'
+date: '2021-07-11'
+categories:
+  - 'javascript'
+tags:
+  - 'morikenjuku'
+coverImage: '印刷しやすい-シンプルなフォルダー-ラベル.png'
 ---
 
 今回はもりけん塾で取り組んだ課題の学習ログです
@@ -68,21 +68,21 @@ VanillaJSで書き直そうとしたら早速手が止まりました...
 
 https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E6%96%B0%E7%89%88JavaScript%E6%9C%AC%E6%A0%BC%E5%85%A5%E9%96%80-%EF%BD%9E%E3%83%A2%E3%83%80%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%88%E3%82%8B%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E7%8F%BE%E5%A0%B4%E3%81%A7%E3%81%AE%E5%BF%9C%E7%94%A8%E3%81%BE%E3%81%A7-%E5%B1%B1%E7%94%B0-%E7%A5%A5%E5%AF%9B-ebook/dp/B01LYO6C1N/ref=sr\_1\_4?dchild=1&keywords=JavaScript&qid=1625485154&s=books&sr=1-4
 
-* * *
+---
 
 ### ①ハンバーガーボタンをクリックした時
 
 上記であげた書籍の中にこんなことが書いてありました。
 
 > クライアントサイドJavaScriptにおいては、文書ツリーから要素ノード(要素)を取り出すというステップは欠かせません。
-> 
+>
 > JavaScript本格入門
 
 ということで、まずは要素の取得から行いました  
 `getElementById()`メソッドを使用しました
 
 > ``[`Document`](https://developer.mozilla.org/ja/docs/Web/API/Document) の `**getElementById()**` メソッドは、``  [`id`](https://developer.mozilla.org/ja/docs/Web/API/Element/id)プロパティが指定された文字列に一致する要素を表す [`Element`](https://developer.mozilla.org/ja/docs/Web/API/Element) オブジェクトを返します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById
 
 取得した要素を変数に入れました。
@@ -177,8 +177,8 @@ https://twitter.com/terrace\_tech/status/1409859931239444484?s=20
 なるほど、、、
 
 コードを見れば明白なことはわざわざコメントで書かない  
-今回私が書いたコメントは”見ればわかる”、無駄なコメントでした。  
-  
+今回私が書いたコメントは”見ればわかる”、無駄なコメントでした。
+
 あと、クラス名変更した場合にコメントアウトまで変更しなくてはいけないのは  
 手間だし、変更を忘れた時に混乱を招くことになるので不要だとも思いました。
 
@@ -212,7 +212,7 @@ https://developer.mozilla.org/ja/docs/Web/CSS/will-change
 [ここ](https://material.io/components/navigation-drawer#anatomy)に書いてありますが、
 
 > Navigation drawers that open from the side are placed on the left of the screen for left-to-right languages, and on the right of the screen for right-to-left languages.
-> 
+>
 > 横から開くナビゲーションドロワーは、左から右の言語の場合は画面の左に、右から左の言語の場合は画面の右に配置されます。
 
 「「「おおおお！！！その方がいい！！！！！」」」
@@ -226,7 +226,7 @@ https://developer.mozilla.org/ja/docs/Web/CSS/will-change
 
 以上でapproveして頂き、mergeしました。
 
-* * *
+---
 
 一つの課題にかなり時間を使ってしまいましたが、  
 先生にレビュー頂き、すごく勉強になりました。  
@@ -235,9 +235,9 @@ https://developer.mozilla.org/ja/docs/Web/CSS/will-change
 先生、何度も添削して頂き、ありがとうございます。  
 (これが無料って何で返していけばいいのですか、、、)
 
-* * *
+---
 
 もりけん塾で学習しています。  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

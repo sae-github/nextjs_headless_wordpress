@@ -1,9 +1,9 @@
 ---
-title: "PrismaでTypeCastしてLIKE検索をする方法を調べた"
-date: "2024-03-03"
-tags: 
-  - "prisma"
-  - "学習記録"
+title: 'PrismaでTypeCastしてLIKE検索をする方法を調べた'
+date: '2024-03-03'
+tags:
+  - 'prisma'
+  - '学習記録'
 ---
 
 ## 前提
@@ -21,7 +21,7 @@ Schemeは下記の通り。
 model invoices {
   id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
   customers customers @relation(fields: [customer_id], references: [id])
-  customer_id String   
+  customer_id String
   amount      Int　　　// here
   status      String   @db.VarChar(255)
   date        DateTime @db.Date
@@ -89,10 +89,10 @@ const invoicesResult = await prisma.invoices.findMany({
 
 > Prisma queries will return data in the JavaScript types that [correspond](https://www.prisma.io/docs/concepts/database-connectors/postgresql#type-mapping-between-postgresql-to-prisma-schema) to the Prisma types defined in your `schema.prisma`. It’s possible to do SQL type casting, like casting from integer to string if you use [$queryRaw](https://www.prisma.io/docs/concepts/components/prisma-client/raw-database-access).  
 > DEEL翻訳) Prisma クエリは、schema.prisma で定義した Prisma 型に対応する JavaScript 型のデータを返します。queryRawを使用すると、整数から文字列へのキャストのようなSQL型キャストを行うことができます。
-> 
-> [How to perform type casting in prisma?](https://github.com/prisma/prisma/discussions/17248) 
+>
+> [How to perform type casting in prisma?](https://github.com/prisma/prisma/discussions/17248)
 
-[How to perform type casting in prisma?](https://github.com/prisma/prisma/discussions/17248) 
+[How to perform type casting in prisma?](https://github.com/prisma/prisma/discussions/17248)
 
 ## $queryRaw
 
@@ -132,7 +132,8 @@ await prisma.$queryRaw<InvoicesTable[]>`SELECT * FROM invoices JOIN customers ON
 
 ref: [Typing `$queryRaw` results](https://www.prisma.io/docs/orm/prisma-client/queries/raw-database-access/raw-queries#typing-queryraw-results)
 
-### Uncaught PrismaClientKnownRequestError:  
+### Uncaught PrismaClientKnownRequestError:
+
 Invalid prisma.$queryRaw() invocation: Raw query failed. Code: \*\*\*. Message: ERROR: operator does not exist: date ~~ text HINT: No operator matches the given name and argument types. You might need to add explicit type casts.
 
 型が一致しないので明示的に型指定する必要があるとのこと。invoices.amountはnumber型なため。
@@ -190,9 +191,9 @@ await prisma.$queryRaw<InvoicesTable[]>`SELECT * FROM invoices JOIN customers ON
 emailがnameと同階層にあることで、AND条件になっていたことが吐き出されたSQLクエリをみてわかった。
 
 ```
-SELECT "public"."invoices"."id", "public"."invoices"."amount", "public"."invoices"."date", "public"."invoices"."status", "public"."invoices"."customer_id" 
-FROM "public"."invoices" LEFT JOIN "public"."customers" AS "j1" ON ("j1"."id") = ("public"."invoices"."customer_id") 
-WHERE ("public"."invoices"."status" ILIKE $1 OR ("j1"."name" ILIKE $2 AND "j1"."email" ILIKE $3 AND ("j1"."id" IS NOT NULL))) 
+SELECT "public"."invoices"."id", "public"."invoices"."amount", "public"."invoices"."date", "public"."invoices"."status", "public"."invoices"."customer_id"
+FROM "public"."invoices" LEFT JOIN "public"."customers" AS "j1" ON ("j1"."id") = ("public"."invoices"."customer_id")
+WHERE ("public"."invoices"."status" ILIKE $1 OR ("j1"."name" ILIKE $2 AND "j1"."email" ILIKE $3 AND ("j1"."id" IS NOT NULL)))
 ORDER BY "public"."invoices"."date" DESC LIMIT $4 OFFSET $5
 ```
 

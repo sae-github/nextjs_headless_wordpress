@@ -1,13 +1,13 @@
 ---
-title: "FileAPIを使用して画像のアップロード・プレビューを実装(ドラッグアンドドロップ対応)"
-date: "2022-03-07"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Frame-5-1.jpg"
+title: 'FileAPIを使用して画像のアップロード・プレビューを実装(ドラッグアンドドロップ対応)'
+date: '2022-03-07'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Frame-5-1.jpg'
 ---
 
 題の通り `ファイルのアップロード ▶︎プレビュー表示` をvanillaJSで実装しました
@@ -66,8 +66,8 @@ https://developer.mozilla.org/ja/docs/Web/API/File
 データの読み込みに FileRenderオブジェクトを使用しました
 
 FileRenderは非同期のため、イベントを使用して読み取り結果を取得しました  
-今回は、画像のURLを取得するために`readAsDataURL()`を使用しました  
-  
+今回は、画像のURLを取得するために`readAsDataURL()`を使用しました
+
 loadはエラーなく読み込みが完了した際に発生し、errorはエラーが発生した際に起こるイベント  
 loadが起こった際には、`readAsDataURL()`の結果を、`render.result` で取得しました
 
@@ -101,7 +101,7 @@ const handleUploadFile = async (file) => {
     uploadBox.textContent = e;
     return;
   }
- 
+
   //変更するボタンを有効に切り替え
   changeButton.disabled = false;
   //プレビューの表示を実行する

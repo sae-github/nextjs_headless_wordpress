@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】言語チャレンジ@中間と一番最初の値を抜きとる"
-date: "2022-02-27"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-11.jpg"
+title: '【もりけん塾】言語チャレンジ@中間と一番最初の値を抜きとる'
+date: '2022-02-27'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-11.jpg'
 ---
 
 ![管理人](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
@@ -19,7 +19,7 @@ coverImage: "Twitter-post-11.jpg"
 現在 フロントエンドエンジニアになるために 日々勉強をしています  
 このブログは その勉強の記録と アウトプットのために運営をしています✨
 
-* * *
+---
 
 もりけん塾の課題 言語チャレンジ に取り組んでいます！
 
@@ -73,8 +73,8 @@ output
 
 ## とりあえず中間の値を求めてみる
 
-今回は問題をみてもすぐに実装方法が思いつかず、かなり悩みました  
-  
+今回は問題をみてもすぐに実装方法が思いつかず、かなり悩みました
+
 まずは中間の値を求める方法を考えました  
 配列のlengthを半分に割り、小数点がでた場合は切り上げます  
 `Math.ceil()` は 小数点以下を繰り上げるメソッドです
@@ -98,10 +98,7 @@ console.log(center);
 
 ![](/images/1-2-3-4-5-6-7-8-9-10-1-1024x576.jpg)
 
-  
 slice・ spliceでできそう
-
-  
 
 ### slice
 
@@ -122,7 +119,7 @@ console.log(sliced);  // [1, 2, 3, 4]
 const output = (input) => {
   let arr = [];
   const f = (parma) => {
-    const center = Math.ceil(parma.length / 2); 
+    const center = Math.ceil(parma.length / 2);
     arr.push(center);
     const sliced = parma.slice(0, center - 1);
     sliced.length > 0 && f(sliced);
@@ -206,9 +203,9 @@ console.log(output(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]));
 // output:  ['e', 'b', 'a']
 ```
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

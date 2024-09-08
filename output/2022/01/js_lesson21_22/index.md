@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題21・22】JSONデータからtableを作成する sort機能追加 編"
-date: "2022-01-23"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-7.jpg"
+title: '【もりけん塾 @JS課題21・22】JSONデータからtableを作成する sort機能追加 編'
+date: '2022-01-23'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-7.jpg'
 ---
 
 ![管理人](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
@@ -37,7 +37,7 @@ https://itosae.com/js\_lesson20/
 - id・年齢に sort機能を追加する
 - 初期状態は サーバーからのレスポンス順
 - 上下の矢印両方が共にクリッカブル領域になっていて 押すと以下の順で変化する  
-    初期状態 ▶︎ 昇順 ▶︎ 降順 ▶︎ 初期状態 ...
+   初期状態 ▶︎ 昇順 ▶︎ 降順 ▶︎ 初期状態 ...
 
 ### 制作物
 
@@ -62,8 +62,8 @@ const createSortButton = () => {
 };
 ```
 
-※ createElementWithClassName(type,class)はclass名を付与したHTMLタグを生成する関数  
-  
+※ createElementWithClassName(type,class)はclass名を付与したHTMLタグを生成する関数
+
 また、矢印画像は CSSで実装しました
 
 ```
@@ -148,12 +148,12 @@ sortする方法を整理します
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/sort
 
 以下の様な関数を定義しました  
-引数へは（現在のstatus、配列に格納された初期状態の列達(row)、イベントが起きたbutton要素）が渡ってきます  
-  
+引数へは（現在のstatus、配列に格納された初期状態の列達(row)、イベントが起きたbutton要素）が渡ってきます
+
 まず最初に sortボタンのstatusがdefaultなのか それ以外なのか で分岐します  
 \- statusがdefault ..... 早期リターンし defaultRows(初期状態の列群)を返す  
-\- statusがdefault以外 ...... statusによってさらに条件分岐  
-  
+\- statusがdefault以外 ...... statusによってさらに条件分岐
+
 一つめの関門でstatusがdefault以外だった場合、asc(昇順) or desc(降順) で更に条件分岐します  
 また、ascでもdescでもなかった場合はエラーをポイと投げます
 
@@ -223,9 +223,9 @@ https://qiita.com/taiju\_suzuki/items/e2bf11fcf1645623235f
 今回の課題でレビューしてくれた方々ありがとうございました  
 Thanks to [もりけん先生](https://twitter.com/terrace_tech)、[もなかさん](https://twitter.com/ruby443n)、[ちひろさん](https://twitter.com/chihiro7029)
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

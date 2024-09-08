@@ -1,15 +1,15 @@
 ---
-title: "Formatterについての学習記録(Stylelint/ESLint/Prettier)"
-date: "2022-05-16"
-categories: 
-  - "css"
-  - "javascript"
-tags: 
-  - "css"
-  - "javascript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-16.png"
+title: 'Formatterについての学習記録(Stylelint/ESLint/Prettier)'
+date: '2022-05-16'
+categories:
+  - 'css'
+  - 'javascript'
+tags:
+  - 'css'
+  - 'javascript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-16.png'
 ---
 
 ![管理人](//images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
@@ -107,7 +107,7 @@ _[max-nesting-depth](https://stylelint.io/user-guide/rules/list/max-nesting-dept
 
 ```
 % npm run stylelint
- 
+
 > npx stylelint '*.scss'
 
 
@@ -166,7 +166,7 @@ stylelintを導入するまでは意識して書いてなかった...
 > The clashes of these two mechanisms for prioritization, source order and specificity, can cause some confusion when reading stylesheets. If a selector with higher specificity comes before the selector it overrides, we have to think harder to understand it, because it violates the source order expectation. Stylesheets are most legible when overriding selectors always come after the selectors they override. That way both mechanisms, source order and specificity, work together nicely.  
 > DeepL訳)  
 > ソース順と特異性という2つの優先順位付けのメカニズムが衝突すると、スタイルシートを読むときに混乱が生じることがあります。より高い特異性を持つセレクタが、それがオーバーライドするセレクタの前に来る場合、それを理解するために、より難しく考えなければならないのです、それはソース・オーダーの期待に反するからです。スタイルシートが最も読みやすいのは、オーバーライドするセレクタが常にオーバーライドするセレクタの後にある場合です。そうすることで、ソース・オーダーと特異性の両方のメカニズムがうまく機能するようになります。
-> 
+>
 > https://stylelint.io/user-guide/rules/list/no-descending-specificity
 
 こちらを読んでかなり納得しました。実装の迷いや、スタイルのカスケードで悩むことを事前に減らすことは重要なことであると学びました。
@@ -306,7 +306,7 @@ Stylelintと同様に--fixをつけることで自動で補完修正をしてく
 #### セミコロン
 
 - [semi](https://eslint.org/docs/rules/semi)  
-    セミコロンがついていなかった場合エラーが出るように設定
+   セミコロンがついていなかった場合エラーが出るように設定
 
 ```
 "rules": {
@@ -336,16 +336,16 @@ https://prettier.io/
 #### よく使いそうな設定
 
 - **[printWidth](https://prettier.io/docs/en/options.html#print-width)**  
-    一行の最長文字数。指定した文字数を超えると折り返す(デフォルトは80)
+   一行の最長文字数。指定した文字数を超えると折り返す(デフォルトは80)
 
 - **[tabWidth](https://prettier.io/docs/en/options.html#tab-width)**  
-    インデントのスペース数についての設定(デフォルトは2)
+   インデントのスペース数についての設定(デフォルトは2)
 
 - [**quotes**](https://prettier.io/docs/en/options.html#quotes)  
-    `singleQuote`をtrueにするとシングルクォートに設定できる(デフォルトはダブルクォート)
+   `singleQuote`をtrueにするとシングルクォートに設定できる(デフォルトはダブルクォート)
 
 - **[semi](https://prettier.io/docs/en/options.html#quotes)**  
-    末尾にセミコロンを付ける(デフォルトはtrue)
+   末尾にセミコロンを付ける(デフォルトはtrue)
 
 #### `.prettierignore`ファイルの作成
 
@@ -373,7 +373,7 @@ css
 
 > _In other words, use **Prettier for formatting** and **linters for catching bugs!**_  
 > DeepL訳) 書式設定にはPrettierを使い、バグ取りにはリンターを使うのです
-> 
+>
 > https://prettier.io/docs/en/comparison.html
 
 Stylelint・ESLintのどちらもコードを整形する機能は組み込まれているが  
@@ -481,6 +481,6 @@ http://www.creativenightly.com/2016/02/How-to-lint-your-css-with-stylelint/
 https://qiita.com/mysticatea/items/f523dab04a25f617c87d#-%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E3%82%92%E3%81%99%E3%82%8B
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

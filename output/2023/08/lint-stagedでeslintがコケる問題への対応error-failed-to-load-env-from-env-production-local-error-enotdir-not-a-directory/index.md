@@ -1,6 +1,6 @@
 ---
-title: "lint-stagedでESLintがコケる問題への対応(error Failed to load env from .env.production.local Error: ENOTDIR: not a directory)"
-date: "2023-08-27"
+title: 'lint-stagedでESLintがコケる問題への対応(error Failed to load env from .env.production.local Error: ENOTDIR: not a directory)'
+date: '2023-08-27'
 ---
 
 ## 開発環境
@@ -18,7 +18,7 @@ date: "2023-08-27"
 package.jsonでlint-stagedで実行するスクリプトを設定した
 
 ```
-{ 
+{
 ...
 　　"lint-staged": {
     "*.{ts,tsx,css,json}": [
@@ -31,7 +31,7 @@ package.jsonでlint-stagedで実行するスクリプトを設定した
 commitしてみると下記エラーが発生した
 
 ```
-Parsing error: Missing semicolon. 
+Parsing error: Missing semicolon.
 ```
 
 手動で`npx eslint --fix`と`npm run format`を実行し、再度commitすると解消した・・・
@@ -43,7 +43,7 @@ Parsing error: Missing semicolon.
 下記の様に`npx eslint --fix`のあとに、`npm run format`を実行する様に設定を変えてみた
 
 ```
-{  
+{
 ...
   "lint-staged": {
     "*.{ts,tsx,css,json}": [
@@ -58,7 +58,7 @@ Parsing error: Missing semicolon.
 ### next lintに変えてみる
 
 ```
-{  
+{
 ...
   "lint-staged": {
     "*.{ts,tsx,css,json}": [

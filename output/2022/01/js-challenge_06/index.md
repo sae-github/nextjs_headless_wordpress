@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾】言語チャレンジ@配列を任意の個数に分割する"
-date: "2022-01-18"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-1-3.jpg"
+title: '【もりけん塾】言語チャレンジ@配列を任意の個数に分割する'
+date: '2022-01-18'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-1-3.jpg'
 ---
 
 もりけん塾で新たに追加された課題....「 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) 」に取り組んでいます。
@@ -74,14 +74,14 @@ const input = ["a", "b", "c", "d"]
 1つ目のinputを渡した場合
 
 ```
-f(input,2); 
+f(input,2);
 console.log(arr);  // [["a", "b"],["c", "d"]]
 ```
 
 2つ目のinputを渡した場合
 
 ```
-f(input); 
+f(input);
 console.log(arr);  // [["a", "b","c"], ["d"]]
 ```
 
@@ -108,8 +108,8 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global\_Objects/A
 ## splice
 
 spliceというメソッドを発見!  
-sliceと違い spliceは破壊的なメソッドの為 元の配列を壊してしまう  
-  
+sliceと違い spliceは破壊的なメソッドの為 元の配列を壊してしまう
+
 仮引数でスプレッド構文を使用して  
 クローンに対してspliceを使えば良さそう
 
@@ -128,9 +128,9 @@ console.log(result2);  // [["a", "b","c"], ["d"]]
 
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global\_Objects/Array/splice
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

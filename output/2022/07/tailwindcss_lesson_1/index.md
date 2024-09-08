@@ -1,13 +1,13 @@
 ---
-title: "【TailwindCSS】@applyと@layerを使用してカスタムCSSクラスを作る"
-date: "2022-07-23"
-categories: 
-  - "css"
-tags: 
-  - "css"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-19.png"
+title: '【TailwindCSS】@applyと@layerを使用してカスタムCSSクラスを作る'
+date: '2022-07-23'
+categories:
+  - 'css'
+tags:
+  - 'css'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-19.png'
 ---
 
 ![管理人](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
@@ -21,7 +21,6 @@ coverImage: "Twitter-post-19.png"
 今回はtailwindCSSの`@apply`と`@layer`の違いについてを調べました  
 また、それらを使用しカスタムCSSクラスの作成を行いました！
 
-  
 環境については下記のもりけん先生のブログを参考に進めています
 
 https://kenjimorita.jp/tailwindcss-vite/
@@ -120,9 +119,9 @@ index.htmlに先ほど作成したクラスと、デフォルトで定義され�
 ## @apply
 
 > Use @apply to inline any existing utility classes into your own custom CSS.
-> 
+>
 > 既存のユーティリティクラスを独自のカスタム CSS にインライン化するには、@apply を使用します。
-> 
+>
 > https://tailwindcss.com/docs/functions-and-directives#apply
 
 ### 使用例
@@ -151,9 +150,9 @@ https://bloggie.io/@kinopyo/organize-your-css-in-the-tailwind-style-with-layer-d
 
 https://tailwindcss.com/docs/reusing-styles
 
-* * *
+---
 
 もりけん塾で学習をしています٩( 'ω' )و  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

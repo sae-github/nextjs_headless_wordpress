@@ -1,14 +1,14 @@
 ---
-title: "【JavaScript Tips#1】StringにSliceを使用する/StringをArrayに/NumberをArrayに"
-date: "2022-08-19"
-categories: 
-  - "javascript"
-tags: 
-  - "codewars"
-  - "javascript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-24.jpg"
+title: '【JavaScript Tips#1】StringにSliceを使用する/StringをArrayに/NumberをArrayに'
+date: '2022-08-19'
+categories:
+  - 'javascript'
+tags:
+  - 'codewars'
+  - 'javascript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-24.jpg'
 ---
 
 毎日[codewars](https://www.codewars.com/)に取り組んでいます！
@@ -116,6 +116,6 @@ String(12345).split("").map(Number)
 これを機に理解を深めたい！！！！！
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

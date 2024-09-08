@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題18】Vanilla JSでスライドショー作成③ auto機能を追加する編"
-date: "2022-01-01"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-1.jpg"
+title: '【もりけん塾 @JS課題18】Vanilla JSでスライドショー作成③ auto機能を追加する編'
+date: '2022-01-01'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-1.jpg'
 ---
 
 現在、もりけん塾で  
@@ -99,7 +99,7 @@ const playOfSlideshow = () => {
 autoPlayという変数にオブジェクトを格納しました  
 オブジェクト内でstratとresetというキーにそれぞれの仕事を紐付けています  
 startはauto機能を開始し、resetは一度止め、再開させます  
-アローボタンや、ページネーションがクリックされた場合に、resetを実行しています。  
+アローボタンや、ページネーションがクリックされた場合に、resetを実行しています。
 
 ### 気になる点...
 
@@ -135,7 +135,7 @@ const autoPlay = function () {
 }();
 ```
 
-この様に 即時関数を使用して書くことを学びました  
+この様に 即時関数を使用して書くことを学びました
 
 ### 文字列をNumber型へ変換する
 
@@ -167,8 +167,8 @@ const updateOfCounter = () => {
 };
 ```
 
-currentIndexをNumber型に変え、プラス1した値を表示させたい....  
-  
+currentIndexをNumber型に変え、プラス1した値を表示させたい....
+
 以下の記事を参考に Number型への変換方法を学びました
 
 https://dev.to/sanchithasr/7-ways-to-convert-a-string-to-number-in-javascript-4l
@@ -200,10 +200,9 @@ parseIntを使用すると、codesandboxで警告がでました
 下記にまとめた参考記事とドキュメントを読むと  
 第二引数のradix(基数)を省略した際の挙動が原因とありました
 
->   
 > 1\. 入力した `string` が "`0x`" または "`0X`" (ゼロに続いて小文字または大文字の X) で始まった場合は、`radix` は `16` と仮定され、残りの文字列が 16 進数として解釈されます。  
 > 2\. 入力した `string` がその他の値で始まるときは、基数は `10` (10 進数) となります。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global\_Objects/parseInt
 
 また以前の仕様では `0` で始まる数字の文字列を 8 進数として解釈していたともありました(現在は廃止されている)  
@@ -240,9 +239,9 @@ https://codesandbox.io/s/js-lesson19-gelvt
 それぞれで 命名の統一や、if文の書き方が統一されていなかったり していました  
 小さなパーツから統一感のあるコーディング、わかりやすい命名をすることが 後々見返す際に大切だと感じました。
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

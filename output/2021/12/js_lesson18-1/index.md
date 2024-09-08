@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題18】Vanilla JSでスライドショー作成② ドットナビを追加する編"
-date: "2021-12-25"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-4.jpg"
+title: '【もりけん塾 @JS課題18】Vanilla JSでスライドショー作成② ドットナビを追加する編'
+date: '2021-12-25'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-4.jpg'
 ---
 
 現在、もりけん塾で  
@@ -137,11 +137,11 @@ const setClickEventInIndicator = () => {
 また、この変更に伴い 仮引数名も修正を行いました
 
 ```
-const switchIndicator = (targetIndex) => {   
+const switchIndicator = (targetIndex) => {
   const selectedIndicator = document.querySelector(".is-selected");
   const indicators = [...document.querySelectorAll(".indicator-item")];
   selectedIndicator.classList.remove("is-selected");
- (indicators[targetIndex].classList.add("is-selected"); 
+ (indicators[targetIndex].classList.add("is-selected");
 }
 ```
 
@@ -216,11 +216,11 @@ nextのボタンがクリックされた場合は、マイナス1をした値を
 
 殴り書きの様なまとめブログになってしましましたが、  
 改めて復習することができる時間になりました  
-次はauto機能の追加を行います...!  
-  
+次はauto機能の追加を行います...!
+
 今回のPRでレビューをくれた方 ありがとうございました。  
-Thanks...💛 もりけん先生([@terrace\_tech](https://twitter.com/terrace_tech))、にゃっつさん([@nyattsu72](https://twitter.com/nyattsu72))
+Thanks...💛 もりけん先生([@terrace_tech](https://twitter.com/terrace_tech))、にゃっつさん([@nyattsu72](https://twitter.com/nyattsu72))
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)  
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)  
 　　　　　　　 ブログ：[https://kenjimorita.jp/](https://kenjimorita.jp/)

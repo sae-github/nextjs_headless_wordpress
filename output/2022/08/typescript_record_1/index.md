@@ -1,15 +1,15 @@
 ---
-title: "TypeScript学習記録#1 基礎のき"
-date: "2022-08-17"
-categories: 
-  - "javascript"
-  - "typescript"
-tags: 
-  - "javascript"
-  - "typescript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-22.jpg"
+title: 'TypeScript学習記録#1 基礎のき'
+date: '2022-08-17'
+categories:
+  - 'javascript'
+  - 'typescript'
+tags:
+  - 'javascript'
+  - 'typescript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-22.jpg'
 ---
 
 この記事はTypeScriptを勉強していく中で、学んだことや疑問に思ったことを記録していくための記事です。
@@ -109,7 +109,7 @@ function add(num) {
 function add(num:number) {
   return num + num;
 }
-// num type is number 
+// num type is number
 ```
 
 ### 残余引数
@@ -150,7 +150,7 @@ const fruit = "apple";
 
 ```
 let counter;
-counter = 10; 
+counter = 10;
 // counter type is any
 ```
 

@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】言語チャレンジ@reduceを使用してオブジェクトをグループ化する"
-date: "2021-12-08"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-1.jpg"
+title: '【もりけん塾】言語チャレンジ@reduceを使用してオブジェクトをグループ化する'
+date: '2021-12-08'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-1.jpg'
 ---
 
 もりけん塾で新たに追加された課題....「 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) 」に取り組んでいます。
@@ -134,9 +134,9 @@ const output = (parma) => {
 };
 ```
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

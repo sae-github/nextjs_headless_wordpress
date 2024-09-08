@@ -1,14 +1,14 @@
 ---
-title: "2022年を振り返る"
-date: "2022-12-31"
-tags: 
-  - "振り返り"
-coverImage: "赤とベージュ-ホームスクール-リモート学習-イベントと特別な関心事-プレゼンテーション-1.jpg"
+title: '2022年を振り返る'
+date: '2022-12-31'
+tags:
+  - '振り返り'
+coverImage: '赤とベージュ-ホームスクール-リモート学習-イベントと特別な関心事-プレゼンテーション-1.jpg'
 ---
 
 年末ですね。無事、仕事を納めて冬休みに入りました。  
-今回は2022年の振り返りを[YWT（やったこと・わかったこと・次にやること）](https://www.jmac.co.jp/glossary/n-z/ywt.html)形式で行いたいと思います！  
-  
+今回は2022年の振り返りを[YWT（やったこと・わかったこと・次にやること）](https://www.jmac.co.jp/glossary/n-z/ywt.html)形式で行いたいと思います！
+
 去年の振り返り👇
 
 https://itosae.com/2021\_memories/
@@ -31,13 +31,13 @@ https://itosae.com/2021\_memories/
 
 今年は、フロントエンドエンジニアへのキャリアチェンジを目標にしていました。  
 結果、(紆余曲折ありましたが...)無事エンジニアとして転職し、開発に携わることができました🎉  
-やっとエンジニアとして、キャリアのスタートが切れました！  
-  
+やっとエンジニアとして、キャリアのスタートが切れました！
+
 他には、業務委託でサイトの制作に携わる機会をいただきコーディング部分を担当しました。  
 一人で丸々コーディング部分を任せていただいたのは、初めてだったので大きな経験となりました。  
 サポートしてくれた方のおかげではありますが、自信になる経験でした。  
-Gitを使用したり、Linter等も導入した状態で制作することも初めてだったので、学びになりました。  
-  
+Gitを使用したり、Linter等も導入した状態で制作することも初めてだったので、学びになりました。
+
 アウトプットした内容👇
 
 ✅ [Formatterについての学習記録(Stylelint/ESLint/Prettier)](https://itosae.com/formatter-study_01/)
@@ -65,26 +65,20 @@ Gitを使用したり、Linter等も導入した状態で制作することも�
 ## T: 次(2023年)にやること
 
 - 何はともあれ 技術力の向上
-    
-    - 自己学習の時間を確保、ルーティーン化する
-        - codewars等でアルゴリズム問題を毎日行う
-    
-    - _TypeScript_の理解を深める
-        - [TypeScript type challenges](https://github.com/type-challenges/type-challenges)をやる
-        
-        - [ブルーベリー本](https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AETypeScript%E5%85%A5%E9%96%80-%E5%AE%89%E5%85%A8%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%E3%81%8B%E3%82%89%E9%AB%98%E5%BA%A6%E3%81%AA%E5%9E%8B%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%BE%E3%81%A7-Software-Design-plus-%E9%88%B4%E6%9C%A8-ebook/dp/B09Y527YPV/ref=sr_1_1?adgrpid=125850700702&gclid=CjwKCAiA2L-dBhACEiwAu8Q9YNR4W_HyVxuEYoXgxco2AX3gLbOqKw8OfYAg0Ecyl5MDDDA1aLj3JxoCTwYQAvD_BwE&hvadid=618680535026&hvdev=c&hvlocphy=1009240&hvnetw=g&hvqmt=e&hvrand=1393980552092180684&hvtargid=kwd-1647563795496&hydadcr=27297_14598079&jp-ad-ap=0&keywords=%E3%83%97%E3%83%AD%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEtypescript%E5%85%A5%E9%96%80&qid=1672475204&sr=8-1)を読む
-    
-    - 周辺知識を増やす
-        - ブラウザの仕組み
-        
-        - 認証周り
-        
-        - キャッシュ...　　等
+
+  - 自己学習の時間を確保、ルーティーン化する
+    - codewars等でアルゴリズム問題を毎日行う
+  - *TypeScript*の理解を深める
+    - [TypeScript type challenges](https://github.com/type-challenges/type-challenges)をやる
+    - [ブルーベリー本](https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AETypeScript%E5%85%A5%E9%96%80-%E5%AE%89%E5%85%A8%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%E3%81%8B%E3%82%89%E9%AB%98%E5%BA%A6%E3%81%AA%E5%9E%8B%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%BE%E3%81%A7-Software-Design-plus-%E9%88%B4%E6%9C%A8-ebook/dp/B09Y527YPV/ref=sr_1_1?adgrpid=125850700702&gclid=CjwKCAiA2L-dBhACEiwAu8Q9YNR4W_HyVxuEYoXgxco2AX3gLbOqKw8OfYAg0Ecyl5MDDDA1aLj3JxoCTwYQAvD_BwE&hvadid=618680535026&hvdev=c&hvlocphy=1009240&hvnetw=g&hvqmt=e&hvrand=1393980552092180684&hvtargid=kwd-1647563795496&hydadcr=27297_14598079&jp-ad-ap=0&keywords=%E3%83%97%E3%83%AD%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEtypescript%E5%85%A5%E9%96%80&qid=1672475204&sr=8-1)を読む
+  - 周辺知識を増やす
+    - ブラウザの仕組み
+    - 認証周り
+    - キャッシュ...　　等
 
 - アウトプットの機会を増やす
-    - 業務先では、アウトプットとしてZennを利用しているので更新する
-    
-    - 自分のブログやZennの更新を増やす(月1目標)
+  - 業務先では、アウトプットとしてZennを利用しているので更新する
+  - 自分のブログやZennの更新を増やす(月1目標)
 
 ## おわり
 

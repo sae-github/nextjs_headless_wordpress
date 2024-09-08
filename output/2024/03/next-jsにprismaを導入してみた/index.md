@@ -1,6 +1,6 @@
 ---
-title: "Next.jsにPrismaを導入してみた"
-date: "2024-03-01"
+title: 'Next.jsにPrismaを導入してみた'
+date: '2024-03-01'
 ---
 
 [Learn Next.js](https://nextjs.org/learn/dashboard-app)で実装したアプリケーションのデータ操作をPrismaで書き換えてみた。
@@ -8,23 +8,20 @@ date: "2024-03-01"
 ## [Prisma](https://www.prisma.io/)とは
 
 > What is Prisma ORM?
-> 
+>
 > - Prisma ORM is an open-source next-generation ORM. It consists of the following parts:
-> 
 > - **Prisma Client**: Auto-generated and type-safe query builder for Node.js & TypeScript
-> 
 > - **Prisma Migrate**: Migration system
-> 
 > - **Prisma Studio**: GUI to view and edit data in your database.
-> 
+>
 > https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma#what-is-prisma-orm
 
 ### ORMとは
 
 **Object-Relational Mapping**
 
-> [データベース](https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9)と[オブジェクト指向プログラミング言語](https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)の間の非互換なデータを変換する[プログラミング](https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0_\(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF\))技法である。
-> 
+> [データベース](https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9)と[オブジェクト指向プログラミング言語](https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)の間の非互換なデータを変換する[プログラミング](<https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)>)技法である。
+>
 > https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E9%96%A2%E4%BF%82%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0
 
 業務先ではRailsを使用していて、ORMにはActive Recordを使用している。  
@@ -131,7 +128,7 @@ model customers {
 model invoices {
   id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
   customers customers @relation(fields: [customer_id], references: [id])
-  customer_id String   
+  customer_id String
   amount      Int
   status      String   @db.VarChar(255)
   date        DateTime @db.Date
@@ -146,7 +143,7 @@ ref: [relations](https://www.prisma.io/docs/orm/prisma-schema/data-model/relatio
 npm install @prisma/client
 ```
 
-installした@prisma/clientモジュールはnode\_modules/.prisma/clientフォルダを参照している。/.prisma/clientには生成されたPrisma Clientが格納されている。
+installした@prisma/clientモジュールはnode_modules/.prisma/clientフォルダを参照している。/.prisma/clientには生成されたPrisma Clientが格納されている。
 
 <figure>
 
@@ -194,14 +191,14 @@ if (process.env.NODE_ENV !== 'production') globalThis.prisma = prisma;
 
 > In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust the database connections as each PrismaClient instance holds its own connection pool.  
 > 開発では、next devコマンドは実行時にNode.jsキャッシュをクリアします。これは、データベースへの接続を作成するホットリロードにより、毎回新しいPrismaClientインスタンスを初期化します。これは、各PrismaClientインスタンスが独自の接続プールを保持するため、データベース接続をすぐに使い果たす可能性があります。
-> 
+>
 > https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices#problem
 
 ## レコードを取得してみる
 
 元々のSQLクエリで取得していたデータをPrisma Clientを使用して置き換えていく。  
 `invoices`テーブルから`amount、id`、`customers`テーブルから`name`、`image_url`、`email`をdateの降順で最大5件、取得している。  
-上のschemaで定義した通り、customer\_idが外部キーとなってcustomersテーブルのidと一致するcustomersのレコードの情報を持ってきている。
+上のschemaで定義した通り、customer_idが外部キーとなってcustomersテーブルのidと一致するcustomersのレコードの情報を持ってきている。
 
 ```
 SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id

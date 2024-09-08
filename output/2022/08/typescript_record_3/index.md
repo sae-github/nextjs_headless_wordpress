@@ -1,15 +1,15 @@
 ---
-title: "TypeScript学習記録③typeとinterface"
-date: "2022-08-19"
-categories: 
-  - "javascript"
-  - "typescript"
-tags: 
-  - "javascript"
-  - "typescript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-22-2-1.jpg"
+title: 'TypeScript学習記録③typeとinterface'
+date: '2022-08-19'
+categories:
+  - 'javascript'
+  - 'typescript'
+tags:
+  - 'javascript'
+  - 'typescript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-22-2-1.jpg'
 ---
 
 この記事はTypeScriptを勉強していく中で、学んだことや疑問に思ったことを記録していくための記事です。  
@@ -182,11 +182,11 @@ interface User {string | undefined};
 interface A {
   name : string
  }
- 
+
  interface B {
    age: number
  }
- 
+
 type Hoge = A & B;
 const hoge:Hoge = {name:"sae",age:10};
 ```

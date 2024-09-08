@@ -1,6 +1,6 @@
 ---
-title: "2024.2月 振り返り"
-date: "2024-03-02"
+title: '2024.2月 振り返り'
+date: '2024-03-02'
 ---
 
 ## 基本情報試験の勉強
@@ -18,7 +18,7 @@ date: "2024-03-02"
 - [TypeScriptでfilterを型安全に使う方法を調べた記録](https://www.blog.itosae.com/posts/10080)
 
 - Next.jsの[チュートリアル](https://nextjs.org/learn/dashboard-app)完走  
-    App routerのキャッチアップのためにやってみた。[Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)や[Streaming](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states)について手を動かしながら学べたのでよかったと思う。Next.jsを扱うのは難しいとも改めて感じた。(黒魔術と言われる所以も理解できる)
+   App routerのキャッチアップのためにやってみた。[Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)や[Streaming](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states)について手を動かしながら学べたのでよかったと思う。Next.jsを扱うのは難しいとも改めて感じた。(黒魔術と言われる所以も理解できる)
 
 - [Prisma](https://www.prisma.io/)入門
 

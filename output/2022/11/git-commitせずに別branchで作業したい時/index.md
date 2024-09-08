@@ -1,11 +1,11 @@
 ---
-title: "git commitせずに別branchで作業したい時【git stash】"
-date: "2022-11-05"
-categories: 
-  - "git-github"
-tags: 
-  - "git_github"
-  - "学習記録"
+title: 'git commitせずに別branchで作業したい時【git stash】'
+date: '2022-11-05'
+categories:
+  - 'git-github'
+tags:
+  - 'git_github'
+  - '学習記録'
 ---
 
 今回は`git commit`せずに別branchで作業したい...そんな時に使用できる  
@@ -39,7 +39,6 @@ Aborting
 機能追加を実装していたfeatureブランチではなく、  
 新たにブランチを切ってバグ対応をしなくてはいけない状況に。
 
-  
 しかし、機能追加実装中のfeatureブランチ内はまだcommitしたくない...そんな時！！！！！！
 
 ## git stash
@@ -102,7 +101,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ### 不要なstashを削除する
 
 ```
-% git stash drop 
+% git stash drop
 Dropped refs/stash@{0} (92fad7c538481485cec40c24404dd7274fbb9710)
 ```
 

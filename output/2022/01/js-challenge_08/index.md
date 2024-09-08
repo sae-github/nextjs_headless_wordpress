@@ -1,18 +1,16 @@
 ---
-title: "【もりけん塾】言語チャレンジ@2つの数値の和が指定された値になる組み合わせを考える"
-date: "2022-01-30"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-10-1.jpg"
+title: '【もりけん塾】言語チャレンジ@2つの数値の和が指定された値になる組み合わせを考える'
+date: '2022-01-30'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-10-1.jpg'
 ---
-
-  
 
 ![管理人](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
 
@@ -27,16 +25,16 @@ coverImage: "Twitter-post-10-1.jpg"
 https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md
 
 課題は `input`の値を`output`の値として出力することです  
-関数の引数に inputの値を渡し、実行した結果をconsole.logで示します  
-  
+関数の引数に inputの値を渡し、実行した結果をconsole.logで示します
+
 ここではoutputの値が、課題で提示されている通りになっていれば クリアとなります  
-つまり、ベストな書き方でなくても OKとなります  
-  
+つまり、ベストな書き方でなくても OKとなります
+
 ブログでは、一つの課題に対して様々な方法で実装することを目標にしています
 
 ## 課題24
 
-inputした配列内の数値の和が 2つ目のinputの値になる 組み合わせ を考えます  
+inputした配列内の数値の和が 2つ目のinputの値になる 組み合わせ を考えます
 
 input
 
@@ -80,9 +78,9 @@ console.log(f([1, 9, 10, 3, 4, 2, 6], 8));  // output :  [4, 2, 6]
 ```
 
 reduceを使用し、Yを求めYがinputした配列に含まれていれば 新たな配列に格納させ、  
-その結果次第で 戻り値を判断します  
+その結果次第で 戻り値を判断します
 
-上記の結果は \[4, 2, 6\] なので求めていたものではありません...  
+上記の結果は \[4, 2, 6\] なので求めていたものではありません...
 
 ![考えたこと](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
 
@@ -90,8 +88,8 @@ reduceを使用し、Yを求めYがinputした配列に含まれていれば 新
 
 Xに4が入った場合に、Yの解も4となり  
 4はinputした配列に含まれているので trueとなり  
-4も配列に格納されてしまう  
-  
+4も配列に格納されてしまう
+
 ここでは、現在 loopの対象となっている値は 含まない様にしたい
 
 ```
@@ -111,11 +109,11 @@ console.log(f([1, 9, 10, 3, 4, 2, 6], 20));  // output: false
 
 reduce内の条件分岐に 条件を追加しました
 
-## indexOfを使用したVer  
+## indexOfを使用したVer
 
 ![考えたこと<br>](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
 
-考えたこと  
+考えたこと
 
 indexOfを使用したケースも考えられそう
 
@@ -155,7 +153,7 @@ console.log(f([1, 9, 10, 3, 4, 2, 6], 3));  // output:  [1, 2]
 console.log(f([1, 9, 10, 3, 4, 2, 6], 20));  // output: false
 ```
 
-## for(){for(){}}で書いてみる  
+## for(){for(){}}で書いてみる
 
 ![考えたこと](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
 
@@ -181,11 +179,11 @@ console.log(f([1, 9, 10, 3, 4, 2, 6], 3));  // output:  [1, 2]
 console.log(f([1, 9, 10, 3, 4, 2, 6], 20));  // output: false
 ```
 
-今回も さまざまな方法を考え実装してみました!  
+今回も さまざまな方法を考え実装してみました!
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

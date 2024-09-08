@@ -97,7 +97,7 @@ blockquote {
 
 blockquote::before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   width: 4px;
   height: 100%;

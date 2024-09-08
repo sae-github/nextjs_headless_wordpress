@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾】言語チャレンジ@配列をオブジェクトにする方法を考える"
-date: "2021-11-27"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-1-3.jpg"
+title: '【もりけん塾】言語チャレンジ@配列をオブジェクトにする方法を考える'
+date: '2021-11-27'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-1-3.jpg'
 ---
 
 もりけん塾で新たに追加された課題....「 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) 」に取り組んでいます。
@@ -123,9 +123,9 @@ console.log(result);
 言語チャレンジはこのように様々な実装でベストを考えることも目的として、もりけん先生が作成してくれた課題です。  
 今後も、課題を進めていき 配列の扱い上手になりたいです
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

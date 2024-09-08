@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題16】 WebAPIを使用した 動的なタブUIを作る part1"
-date: "2021-11-06"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-1.jpg"
+title: '【もりけん塾 @JS課題16】 WebAPIを使用した 動的なタブUIを作る part1'
+date: '2021-11-06'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-1.jpg'
 ---
 
 現在、もりけん塾で  
@@ -19,8 +19,8 @@ coverImage: "WebブラウザにWebサイトが表示までの旅へ-
 ## 課題16
 
 [yahooのトップページ](https://www.yahoo.co.jp/)にある様なタブUIを作成しました  
-JSONデータを作成 fetchで取得 タブ、コンテンツを作成しDOMへ追加しました  
-  
+JSONデータを作成 fetchで取得 タブ、コンテンツを作成しDOMへ追加しました
+
 以下、今回のPRで含んでいる仕様です
 
 ☑︎それぞれのカテゴリタブを開くことができてそれぞれのジャンルに応じた記事が4つ表示できる。(記事のタイトル名は適当)  
@@ -28,7 +28,7 @@ JSONデータを作成 fetchで取得 タブ、コンテンツを作成しDOMへ
 ☑︎カテゴリタブは切り替えられる。面倒なら2つのカテゴリだけでよいです。その場合ニュースと経済だけにします  
 ☑︎どのカテゴリタブを初期表示時に選んでいるかはデータとして持っている  
 ☑︎htmlはulだけ作ってあとはcreateElementで作る  
-☑︎try-catchでエラー時はulの中に「ただいまサーバー側で通信がぶっ壊れています」みたいなテキストを画面内に表示すること  
+☑︎try-catchでエラー時はulの中に「ただいまサーバー側で通信がぶっ壊れています」みたいなテキストを画面内に表示すること
 
 ### 今回のコード
 
@@ -51,14 +51,14 @@ https://codesandbox.io/s/js-lesson16-dtekc
 課題の仕様には記載はありませんが、  
 私が作成したタブメニューは タブがクリックされる度に リクエストを起こす仕様にしていました
 
-ここに関して もりた先生からアドバイスをいただきました  
-  
+ここに関して もりた先生からアドバイスをいただきました
+
 クリック回にリクエストをするのであれば、  
 APIをカテゴリーごとに分ける方法 をとることを 教えて頂きました
 
 たしかに....  
 DOMに追加するわけでもなく、全カテゴリーのデータを取得していたら、  
-それこそパフォーマンスが悪い  
+それこそパフォーマンスが悪い
 
 カテゴリーごとに 以下のサイトで APIを作成しました
 
@@ -95,7 +95,7 @@ tabMenuList.addEventListener("click", (e) => { 　　　　　　　　　　　
 ```
 tabMenuList.addEventListener("click", (e) => {
   const hasActiveClassElement = document.getElementsByClassName(
-    "tab-select")[0]; 
+    "tab-select")[0];
 
   if (hasActiveClassElement) {
     hasActiveClassElement.classList.remove("tab-select");
@@ -108,7 +108,7 @@ tabMenuList.addEventListener("click", (e) => {
     imgWrapper.textContent = "";
 
     createClickedTabContent(e.target);
- 
+
 });
 ```
 
@@ -204,7 +204,7 @@ const hasSelectData = data.find((value) => value.select === true);
 ```
 
 > `find` メソッドは、配列のそれぞれの添字に対して一度ずつ、`callback` 関数を実行し、`callback` 関数が [truthy](https://developer.mozilla.org/ja/docs/Glossary/Truthy) な値を返すまで繰り返します。その場合、`find` は直ちにその要素の値を返します。そうでなければ、`find` は [`undefined`](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) を返します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global\_Objects/Array/find
 
 分割代入を使用して 以下の様に書くこともできました
@@ -294,11 +294,11 @@ https://developer.mozilla.org/ja/docs/Learn/Accessibility/WAI-ARIA\_basics
 コメント数と、3日前までのニュースであればNewマークが出る様な機能を追加します。
 
 今回もレビューいただきありがとうございました  
-Thanks... [もりた先生](https://twitter.com/terrace_tech)　[もなかさん](https://twitter.com/ruby443n)  
+Thanks... [もりた先生](https://twitter.com/terrace_tech)　[もなかさん](https://twitter.com/ruby443n)
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

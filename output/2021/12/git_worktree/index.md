@@ -1,14 +1,14 @@
 ---
-title: "git worktreeを理解したい！！！！【もりけん塾 勉強会の復習】"
-date: "2021-12-19"
-categories: 
-  - "git-github"
-tags: 
-  - "git_github"
-  - "morikenjuku"
-  - "勉強会"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-2-1.jpg"
+title: 'git worktreeを理解したい！！！！【もりけん塾 勉強会の復習】'
+date: '2021-12-19'
+categories:
+  - 'git-github'
+tags:
+  - 'git_github'
+  - 'morikenjuku'
+  - '勉強会'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-2-1.jpg'
 ---
 
 先日、もりけん塾で行われた勉強会で  
@@ -32,8 +32,8 @@ git worktreeを使用すると、一つのリポジトリに複数のワーク�
 
 ドキュメントには以下の様にありました
 
-\> You are in the middle of a refactoring session and your boss comes in and demands that you fix something immediately. You might typically use [git-stash\[1\]](https://git-scm.com/docs/git-stash) to store your changes away temporarily, however, your working tree is in such a state of disarray (with new, moved, and removed files, and other bits and pieces strewn around) that you don’t want to risk disturbing any of it. Instead, you create a temporary linked working tree to make the emergency fix, remove it when done, and then resume your earlier refactoring session.  
-  
+\> You are in the middle of a refactoring session and your boss comes in and demands that you fix something immediately. You might typically use [git-stash\[1\]](https://git-scm.com/docs/git-stash) to store your changes away temporarily, however, your working tree is in such a state of disarray (with new, moved, and removed files, and other bits and pieces strewn around) that you don’t want to risk disturbing any of it. Instead, you create a temporary linked working tree to make the emergency fix, remove it when done, and then resume your earlier refactoring session.
+
 DEEPL訳  
 リファクタリングの最中に、上司がやってきて、すぐに何かを修正するように要求された場合。通常なら git-stash\[1\] を使って変更を一時的に保存しておくかもしれませんが、作業ツリーは（新しいファイルや移動・削除したファイル、その他の断片が散らばって）無秩序な状態になっており、それを邪魔するリスクは避けたいと思うでしょう。その代わりに、一時的にリンクされた作業ツリーを作成して緊急修正を行い、完了したらそれを削除して、以前のリファクタリングセッションを再開するのです。
 
@@ -79,7 +79,7 @@ fatal: 'main' is already checked out at <path>
 また、上記では既存のbranchを使用しましたが、新たにbranchを切ることもできる
 
 ```
- % git worktree add worktree/dev -b feature/b 
+ % git worktree add worktree/dev -b feature/b
 ```
 
 ③ 現在のworktreeの状況を確認する
@@ -120,7 +120,7 @@ Switched to a new branch 'feature/b'
 
  % git commit -m "fix:fix"
 [feature/feature/b 95a6d32] fix:fix
- 1 file changed, 1 insertion(+), 1 deletion(-) 
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
 ⑦ 元の場所へ戻る
@@ -164,9 +164,9 @@ git管理をしている現場で働いている方との差を感じました
 こういった勉強会の機会を無駄にせず  
 必要に応じて使いこなせる様にしていきたいです✨
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

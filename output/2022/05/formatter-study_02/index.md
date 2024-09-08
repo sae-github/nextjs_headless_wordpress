@@ -1,14 +1,14 @@
 ---
-title: "huskyとlint-stageでコミット時にformatterを走らせる"
-date: "2022-05-22"
-categories: 
-  - "css"
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-17.png"
+title: 'huskyとlint-stageでコミット時にformatterを走らせる'
+date: '2022-05-22'
+categories:
+  - 'css'
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-17.png'
 ---
 
 ![管理人](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
@@ -72,7 +72,7 @@ npx mrm@2 lint-staged
 ```
 
 > これは husky と lint-staged をインストールし、プロジェクトの package.json に設定を追加して、対応するファイルを pre-commit フックで自動的にフォーマットするようにするものです。
-> 
+>
 > https://prettier.io/docs/en/precommit.html#option-1-lint-stagedhttpsgithubcomokonetlint-staged
 
 以下の部分が`package.json` へ追加された
@@ -165,7 +165,7 @@ ignoreする、またはlint-stagedで実行するファイルをの指定方法
 
 ```
 % git commit -m "fix"
-... 
+...
 hint: The '.husky/pre-commit' hook was ignored because it's not set as executable.
 hint: You can disable this warning with `git config advice.ignoredHook false`.
 ```
@@ -185,6 +185,6 @@ https://rinoguchi.net/2021/12/husky-and-lint-staged.html
 https://qiita.com/noraworld/items/c562de68a627ae792c6c
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

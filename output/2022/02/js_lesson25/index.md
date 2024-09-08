@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題25】会員登録ページの作成 フォームのバリデーションを追加する"
-date: "2022-02-07"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-9.jpg"
+title: '【もりけん塾 @JS課題25】会員登録ページの作成 フォームのバリデーションを追加する'
+date: '2022-02-07'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-9.jpg'
 ---
 
 ![管理人](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
@@ -20,7 +20,6 @@ coverImage: "Twitter-post-9.jpg"
 フロントエンドエンジニアになるために 日々勉強をしています  
 このブログは その勉強の記録と アウトプットのために運営をしています✨
 
-  
 現在、もりけん塾で  
 [マークアップエンジニアの方がフロントエンドエンジニアになる為の課題](https://github.com/sae-github/handsonFrontend/blob/master/work/markup/1.md)に取り組んでいます。  
 今回は課題25の実装で学んだことをブログへまとめます
@@ -35,11 +34,11 @@ https://itosae.com/js\_lesson24/
 
 - 初回は送信ボタンとチェックボックスはdisabled状態。
 - ユーザー名は16文字未満とし、  
-    もしinvalidならバリデーションテキストは 「ユーザー名は15文字以下にしてください。」
+   もしinvalidならバリデーションテキストは 「ユーザー名は15文字以下にしてください。」
 - メールアドレスは一般的なメール形式のバリデーションにしてください。  
-    もしinvalidならバリデーションテキストは「メールアドレスの形式になっていません。」
+   もしinvalidならバリデーションテキストは「メールアドレスの形式になっていません。」
 - パスワードのバリデーションは8文字以上の大小の英数字を交ぜたものとし、  
-    もしinvalidならバリデーションテキストは「8文字以上の大小の英数字を交ぜたものにしてください。」
+   もしinvalidならバリデーションテキストは「8文字以上の大小の英数字を交ぜたものにしてください。」
 - 利用規約のスクロール実装に併せて、チェックボックスのdisabledは外し、checkedになる([前回実装部分](https://itosae.com/js_lesson24/))
 - 全ての入力がvalidの場合にのみ送信ボタンのdisabledがfalseになり押下でき、`register-done.html`に遷移できる。
 
@@ -69,8 +68,6 @@ inputのtype属性がemailの場合、以下の正規表現が適用されるそ
 ```
 
 https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)
-
-  
 
 ![わたし](/images/43D8A608-67A3-48E2-9600-EFFAEB7E218E_1_201_a-150x150.jpeg)
 
@@ -230,7 +227,6 @@ const checkAllInputs = () => {
 `every()`を使用し IDをもとにinputフィールドへの入力値を取得します、  
 空ではないか？バリデーションは通ったか？をbooleanで返します
 
-  
 `every()`は、配列内の要素に対してcallback関数を実行し その結果をbooleanで返します  
 結果がfalseになった段階で callbackはfalseを返し その後の要素に対してはテストはしないメソッド
 
@@ -299,11 +295,10 @@ inputイベントはvalueの変更のたびに発生する為、一文字入力�
 
 https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/input\_event
 
-  
 blur時に特定のバリデーションをチェックし、  
 focus時にエラーメッセージを外すと パフォーマンスが良くなるとレビューを頂きました  
-頂いたレビューをもとに修正をおこないました  
-  
+頂いたレビューをもとに修正をおこないました
+
 inputフィールドごとに イベントを設定しました
 
 ```
@@ -349,7 +344,6 @@ const resetInputField = (e) => {
 };
 ```
 
-  
 今回仕様したイベントのそれぞれの違い
 
 <table><tbody><tr><td>blur</td><td>フォーカスを失ったときに発生する。バブリングしない</td></tr><tr><td>change</td><td>&lt;input&gt;&lt;select&gt;&lt;textarea&gt;要素の値の変更が確定した際に発生するが<br>要素の種類などによって発生条件は変動。<br>checkboxは :checkedになった場合に発生する</td></tr><tr><td>focus</td><td>フォーカス時に発生。バブリングしない</td></tr></tbody></table>
@@ -360,14 +354,14 @@ const resetInputField = (e) => {
 
 バリデーションは Webサイトや、アプリでよくみるパーツですが  
 いざ実装するとなると、配慮することがたくさんあると感じました。  
-正規表現も少しずつですが、苦手意識が薄れてきました  
-  
+正規表現も少しずつですが、苦手意識が薄れてきました
+
 今回レビューをしてくれた  
 [もなかさん](https://twitter.com/ruby443n)、[もりけん先生](https://twitter.com/terrace_tech) ...ありがとうございましたヾ(\*´∪｀\*)ﾉ"
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

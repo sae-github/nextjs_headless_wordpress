@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾】言語チャレンジ@￼uniqueな要素の配列と、その要素をカウントした配列をつくる"
-date: "2022-07-30"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-21-1.jpg"
+title: '【もりけん塾】言語チャレンジ@￼uniqueな要素の配列と、その要素をカウントした配列をつくる'
+date: '2022-07-30'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-21-1.jpg'
 ---
 
 もりけん塾の課題 [言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md) に取り組んでいます！
@@ -150,6 +150,6 @@ console.log(f(input));
 ```
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

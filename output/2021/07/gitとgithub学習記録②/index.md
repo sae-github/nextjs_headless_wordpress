@@ -1,9 +1,9 @@
 ---
-title: "gitとGitHub勉強記録②"
-date: "2021-07-02"
-categories: 
-  - "git-github"
-coverImage: "note　ノート　記事見出し画像　アイキャッチ-1.png"
+title: 'gitとGitHub勉強記録②'
+date: '2021-07-02'
+categories:
+  - 'git-github'
+coverImage: 'note　ノート　記事見出し画像　アイキャッチ-1.png'
 ---
 
 前回に引き続きgitとGitHubについてまとめていきます。

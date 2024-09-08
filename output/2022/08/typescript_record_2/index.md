@@ -1,15 +1,15 @@
 ---
-title: "TypeScript学習記録#2 VoidとNeverの違い"
-date: "2022-08-19"
-categories: 
-  - "javascript"
-  - "typescript"
-tags: 
-  - "javascript"
-  - "typescript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-22-2.jpg"
+title: 'TypeScript学習記録#2 VoidとNeverの違い'
+date: '2022-08-19'
+categories:
+  - 'javascript'
+  - 'typescript'
+tags:
+  - 'javascript'
+  - 'typescript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-22-2.jpg'
 ---
 
 この記事はTypeScriptを勉強していく中で、学んだことや疑問に思ったことを記録していくための記事です。

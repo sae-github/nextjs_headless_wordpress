@@ -1,22 +1,22 @@
 ---
-title: "【もりけん塾】言語チャレンジ@iteratorについて"
-date: "2022-07-27"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-  - "言語チャレンジ"
-coverImage: "Twitter-post-20.jpg"
+title: '【もりけん塾】言語チャレンジ@iteratorについて'
+date: '2022-07-27'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+  - '言語チャレンジ'
+coverImage: 'Twitter-post-20.jpg'
 ---
 
 もりけん塾で JavaScriptの[言語チャレンジ](https://github.com/kenmori/handsonFrontend/blob/master/work/basic/Work.md)に 取り組んでいます
 
 課題は `input`の値を`output`の値として出力することです  
-関数の引数に inputの値を渡し、実行した結果をconsole.logで示します  
-  
+関数の引数に inputの値を渡し、実行した結果をconsole.logで示します
+
 ここではoutputの値が、課題で提示されている通りになっていれば クリアとなります  
 つまり、ベストな書き方でなくても OKとなります
 
@@ -164,6 +164,6 @@ https://www.programiz.com/javascript/iterators-iterables
 ですがiteratorについて学ぶきっかけになり、どのように反復処理がされているかを理解することができました。
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

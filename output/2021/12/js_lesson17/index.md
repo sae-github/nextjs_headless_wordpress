@@ -1,15 +1,15 @@
 ---
-title: "【もりけん塾 @JS課題17】Vanilla JSでスライドショー作成①"
-date: "2021-12-24"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "WebブラウザにWebサイトが表示までの旅へ-3-1.jpg"
+title: '【もりけん塾 @JS課題17】Vanilla JSでスライドショー作成①'
+date: '2021-12-24'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'WebブラウザにWebサイトが表示までの旅へ-3-1.jpg'
 ---
 
 現在、もりけん塾で  
@@ -134,7 +134,7 @@ const findOrderOfDisplayedItem = () => {
   return targetIndex + 1;
 }
 
-// カウンターの更新 
+// カウンターの更新
 const updateOfCounter = () => {
   document.querySelector(".current-number").textContent = 　　　findOrderOfDisplayedItem();
 }
@@ -178,21 +178,20 @@ JSDocコメントについて教えて頂きました
 // コメントコメントコメントコメント
 ```
 
-  
 JSDocは変数や関数の宣言の直前に以下の形式でコメントを書きます。  
 詳しい書き方は、下の参考リンクをみることをお勧めします。
 
 ```
 /**
-  * 
+  *
   */
 ```
 
 また以前塾内でシェアして頂いた、_JavaScript best practices_ には以下の様にありました
 
 Again the trick is moderation. Comment when there is an important thing to say, and if you do comment use the /\* \*/ notation. Single line comments using // can be problematic if people minify your code without stripping comments and in general are less versatile.  
-(引用：https://www.w3.org/wiki/JavaScript\_best\_practices)  
-  
+(引用：https://www.w3.org/wiki/JavaScript\_best\_practices)
+
 // DeppL訳  
 繰り返しになりますが、コツは「節度」です。コメントする場合は、/\* \*/という記法を使いましょう。一行のコメントで//を使用すると、コメントを削除せずにコードをminifyされた場合に問題が発生する可能性があり、一般に汎用性が低くなります。
 
@@ -207,9 +206,9 @@ https://w.atwiki.jp/aias-jsstyleguide2/pages/14.html#comment\_syntax
 https://www.w3.org/wiki/JavaScript\_best\_practices
 
 レビューを下さった、みなさんありがとうございました。  
-thanks 💛もなかさん([@ruby443n](https://twitter.com/ruby443n)) Nariさん([@weegie\_design](https://twitter.com/weegie_design)) yukaさん([@mamuuu08)](https://twitter.com/mamuuu08)、  
-あやかさん([@despair\_ya12](https://twitter.com/despair_ya12))
+thanks 💛もなかさん([@ruby443n](https://twitter.com/ruby443n)) Nariさん([@weegie_design](https://twitter.com/weegie_design)) yukaさん([@mamuuu08)](https://twitter.com/mamuuu08)、  
+あやかさん([@despair_ya12](https://twitter.com/despair_ya12))
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)  
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)  
 　　　　　　　 ブログ：[https://kenjimorita.jp/](https://kenjimorita.jp/)

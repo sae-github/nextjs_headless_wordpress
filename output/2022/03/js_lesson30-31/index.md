@@ -1,18 +1,17 @@
 ---
-title: "【もりけん塾 @JS課題30〜31】ドロワーメニューの実装"
-date: "2022-03-17"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "js_lesson"
-  - "プログラミング"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "Twitter-post-12.jpg"
+title: '【もりけん塾 @JS課題30〜31】ドロワーメニューの実装'
+date: '2022-03-17'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'js_lesson'
+  - 'プログラミング'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: 'Twitter-post-12.jpg'
 ---
 
-  
 現在、もりけん塾で  
 [マークアップエンジニアの方がフロントエンドエンジニアになる為の課題](https://github.com/kenmori/handsonFrontend/blob/master/work/markup/1.md)に取り組んでいます。  
 今回は課題30-31の実装で学んだことをブログへまとめます
@@ -181,9 +180,9 @@ console.log([...undefined]);
 
 https://stackoverflow.com/questions/47155141/spreading-undefined-in-array-vs-object
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

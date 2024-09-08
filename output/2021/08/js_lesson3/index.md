@@ -1,13 +1,13 @@
 ---
-title: "【もりけん塾】#JS課題3"
-date: "2021-08-08"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "morikenjuku"
-  - "学習記録"
-coverImage: "24.png"
+title: '【もりけん塾】#JS課題3'
+date: '2021-08-08'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'morikenjuku'
+  - '学習記録'
+coverImage: '24.png'
 ---
 
 今回はもりけん塾で行ったJS課題3で学んだことをまとめた記事です。
@@ -69,7 +69,7 @@ ul.appendChild(a2);
 ## createDocumentFragment()
 
 > **`DocumentFragment`** インターフェイスは、親ノードを持たない最小限の文書オブジェクト (文書の断片) を表します。これは [`Document`](https://developer.mozilla.org/ja/docs/Web/API/Document) の軽量版として使用され、標準の文書のようにノードで構成される文書構造の区間を格納します。
-> 
+>
 > https://developer.mozilla.org/ja/docs/Web/API/DocumentFragment
 
 DOMツリーに要素が追加されたり、削除されたりすることでリフローが発生する為  
@@ -85,12 +85,12 @@ https://developers.google.com/speed/docs/insights/browser-reflow
 
 2つの違いをまとめました
 
-| append() | appendChild() |
-| --- | --- |
-| DOMStringも追加可能 | Nodeオブジェクトのみ追加可能 |
-| 戻り値なし | 追加したNodeオブジェクトを返す |
-| 複数のNodeとDOMStringを追加可能 | 一つのみ |
-| IEのみサポートなし | 全てのブラウザでサポートあり |
+| append()                        | appendChild()                  |
+| ------------------------------- | ------------------------------ |
+| DOMStringも追加可能             | Nodeオブジェクトのみ追加可能   |
+| 戻り値なし                      | 追加したNodeオブジェクトを返す |
+| 複数のNodeとDOMStringを追加可能 | 一つのみ                       |
+| IEのみサポートなし              | 全てのブラウザでサポートあり   |
 
 他にもprepend()、after()、before()などのメソッドも  
 append()と挿入場所は違えど、特徴は同じでした。  
@@ -127,12 +127,11 @@ for(let i = 0, len = items.length; i < len; i++) {
 
   anchor.insertAdjacentHTML('beforeend', item.text);
   frag.appendChild(li);
-} 
+}
 
 ul.appendChild(frag);
 ```
 
-  
 繰り返しの処理はfor文を使用し、オブジェクト配列から取り出し実装をしました。  
 初めのコードより、記述もリフローも減りました！
 
@@ -145,9 +144,9 @@ ul.appendChild(frag);
 
 今回レビューをしてくれたもりけん先生、ありがとうございました。
 
-* * *
+---
 
 もりけん塾でJavaScriptを学習をしています！  
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

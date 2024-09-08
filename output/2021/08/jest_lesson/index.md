@@ -1,14 +1,14 @@
 ---
-title: "【もりけん塾】Jestハンズオン勉強会"
-date: "2021-08-11"
-categories: 
-  - "javascript"
-tags: 
-  - "javascript"
-  - "morikenjuku"
-  - "勉強会"
-  - "学習記録"
-coverImage: "印刷しやすい-シンプルなフォルダー-ラベル-3.png"
+title: '【もりけん塾】Jestハンズオン勉強会'
+date: '2021-08-11'
+categories:
+  - 'javascript'
+tags:
+  - 'javascript'
+  - 'morikenjuku'
+  - '勉強会'
+  - '学習記録'
+coverImage: '印刷しやすい-シンプルなフォルダー-ラベル-3.png'
 ---
 
 今回の内容はJestについての学習記録です。
@@ -46,7 +46,7 @@ package.jsonが生成されました。
 
 ### \- もう一度npm install --save-dev jestでJestをインストール
 
-無事、node\_modulesが生成されました。
+無事、node_modulesが生成されました。
 
 ### \- package.jsonに以下を追加する
 
@@ -241,8 +241,8 @@ test('toContainEqual Ver', () =>　　　　　　　　　　　　　　　　
 toContainの方はエラーが起こり、toContainEqualの方は無事テストできました。  
 toContainEqualは配列内に含まれるオブジェクトもテストができるという違いがあることを学びました。
 
-> 特定の構造と値を持つ要素が配列に含まれていることをチェックしたい場合は`.toContainEqual`を使用して下さい。 
-> 
+> 特定の構造と値を持つ要素が配列に含まれていることをチェックしたい場合は`.toContainEqual`を使用して下さい。
+>
 > https://jestjs.io/ja/docs/expect#tocontainequalitem
 
 #### toThrow
@@ -261,7 +261,7 @@ test('filterOrange equal orange', () => {
 });
 ```
 
-どのようなテストなのかが全然わからないです...適当さが出ている...  
+どのようなテストなのかが全然わからないです...適当さが出ている...
 
 もりけん先生からは、  
 何をして、何をするのかを書いた方がいいと、アドバイスを頂きました。
@@ -287,6 +287,6 @@ test('If array containing orange is passed, array containing orange return', () 
 
 現在、もりけん塾でJavaScriptを中心に学習をしています！
 
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

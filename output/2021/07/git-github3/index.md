@@ -1,9 +1,9 @@
 ---
-title: "gitとGitHub勉強記録③"
-date: "2021-07-13"
-categories: 
-  - "git-github"
-coverImage: "印刷しやすい-シンプルなフォルダー-ラベル-1.png"
+title: 'gitとGitHub勉強記録③'
+date: '2021-07-13'
+categories:
+  - 'git-github'
+coverImage: '印刷しやすい-シンプルなフォルダー-ラベル-1.png'
 ---
 
 今回はgitとGitHubの学習ログです。  
@@ -11,13 +11,12 @@ coverImage: "印刷しやすい-シンプルなフォルダー-ラベ�
 今どのような状況になっていて、何をしているのかがわからなくなり、迷子になりました。  
 そのため、今回はもりけん先生の[gitのハンズオン](https://github.com/sae-github/handsonFrontend/tree/master/git/work)教材を行い、脱・迷子を目指します！
 
-* * *
+---
 
 ## プルリクエスト(PR)とは
 
 自分の変更したコードをリポジトリに取り込んでもらえるように依頼する機能。
 
-  
 主な開発の流れと、イメージ↓
 
 ![](/images/ワークツリーで-ふぁい-1-2-1024x536.png)
@@ -82,10 +81,10 @@ HEAD とは
 
 ![](/images/スクリーンショット-2021-07-12-21.38.31-1024x269.png)
 
-* * *
+---
 
 現在もりけん塾で学習をしています。
 
-もりけん先生のTwitter：[https://twitter.com/terrace\_tech](https://twitter.com/terrace_tech)
+もりけん先生のTwitter：[https://twitter.com/terrace_tech](https://twitter.com/terrace_tech)
 
 https://kenjimorita.jp/

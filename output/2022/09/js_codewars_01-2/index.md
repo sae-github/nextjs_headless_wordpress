@@ -1,15 +1,15 @@
 ---
-title: "【Codewars】Regexの問題に取り組んだ記録"
-date: "2022-09-16"
-categories: 
-  - "codewars"
-  - "javascript"
-tags: 
-  - "codewars"
-  - "javascript"
-  - "プログラミング"
-  - "学習記録"
-coverImage: "Twitter-post-26.png"
+title: '【Codewars】Regexの問題に取り組んだ記録'
+date: '2022-09-16'
+categories:
+  - 'codewars'
+  - 'javascript'
+tags:
+  - 'codewars'
+  - 'javascript'
+  - 'プログラミング'
+  - '学習記録'
+coverImage: 'Twitter-post-26.png'
 ---
 
 毎日[codewars](https://www.codewars.com/)に取り組んでいます！
@@ -40,7 +40,7 @@ console.log(f("a234")); // false
 
 ### 数字の正規表現
 
-数字は以下の正規表現を使用して表現することができる　
+数字は以下の正規表現を使用して表現することができる
 
 ```
 \d
