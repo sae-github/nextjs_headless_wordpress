@@ -2,31 +2,27 @@ import { Box, Text, styled } from '@kuma-ui/core'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import React from 'react'
-import { postApi } from '@/apis/post/postApi'
 import { PostContent } from '@/app/components/app/Posts'
 import { AdminsArea } from '@/app/components/common/AdminsArea'
-import { TableOfContents } from '@/app/components/common/TableOfContent'
+import { getPosts } from '@/lib/posts'
 
 const Post = async ({ params }: { params: Props }) => {
   if (isNaN(Number(params.id))) notFound()
-  const result = await postApi.getPost(params.id)
+  const postData = getPosts().find((post) => post.id === params.id)
   return (
     <Box display='flex' flexDirection={['column', 'column', 'row']}>
       <Main>
-        {result.isSuccess ? (
-          <PostContent pageContent={result.data} />
+        {postData ? (
+          <PostContent pageContent={postData} />
         ) : (
           <Box textAlign='center'>
-            <Text>{result.message}</Text>
+            <Text>表示する記事が見つかりませんでした。</Text>
             <Link href='/'>トップに戻る</Link>
           </Box>
         )}
       </Main>
       <Aside>
         <AdminsArea />
-        <TableOfContentsArea>
-          {result.isSuccess && <TableOfContents textHtml={result.data.content.rendered} />}
-        </TableOfContentsArea>
       </Aside>
     </Box>
   )
