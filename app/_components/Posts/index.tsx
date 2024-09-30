@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import React, { FC } from 'react'
 import { getPosts } from '@/lib/posts'
 
-export const HomeContent: FC<{ page: string }> = async ({ page }) => {
+export const Posts: FC<{ page: string }> = async ({ page }) => {
   const allPostsData = getPosts()
   if (isNaN(Number(page))) notFound()
   return (

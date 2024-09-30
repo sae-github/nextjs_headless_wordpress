@@ -1,6 +1,6 @@
 import { styled } from '@kuma-ui/core'
 import { Metadata } from 'next'
-import { Header } from './components/common/Header'
+import { Header } from './_components/common/Header'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? 'http://localhost:3000'),
