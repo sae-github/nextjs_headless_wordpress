@@ -3,9 +3,9 @@ import { format } from 'date-fns'
 import React, { FC } from 'react'
 import './style.css'
 import ReactMarkdown from 'react-markdown'
-import { TableOfContents } from '../../common/TableOfContent'
+import { TableOfContents } from '../../../../_components/common/TableOfContent'
 import { PostData } from '@/lib/posts'
-export const PostContent: FC<{ pageContent: PostData }> = ({ pageContent }) => {
+export const Article: FC<{ pageContent: PostData }> = ({ pageContent }) => {
   return (
     <article>
       <div>

@@ -2,8 +2,8 @@ import { Box, Text, styled } from '@kuma-ui/core'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import React from 'react'
-import { PostContent } from '@/app/components/app/Posts'
-import { AdminsArea } from '@/app/components/common/AdminsArea'
+import { AdminsArea } from '@/app/_components/common/AdminsArea'
+import { Article } from '@/app/posts/[id]/_components/Article'
 import { getPosts } from '@/lib/posts'
 
 const Post = async ({ params }: { params: Props }) => {
@@ -13,7 +13,7 @@ const Post = async ({ params }: { params: Props }) => {
     <Box display='flex' flexDirection={['column', 'column', 'row']}>
       <Main>
         {postData ? (
-          <PostContent pageContent={postData} />
+          <Article pageContent={postData} />
         ) : (
           <Box textAlign='center'>
             <Text>表示する記事が見つかりませんでした。</Text>

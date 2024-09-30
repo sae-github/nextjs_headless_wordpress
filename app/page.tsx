@@ -1,11 +1,10 @@
 import { Box, styled } from '@kuma-ui/core'
-import { AdminsArea } from './components/common/AdminsArea'
-import { HomeContent } from '@/app/components/app/Home'
-
+import { Posts } from './_components/Posts'
+import { AdminsArea } from './_components/common/AdminsArea'
 const Home = () => (
   <Box display='flex' flexDirection={['column', 'column', 'row']}>
     <Main>
-      <HomeContent page={'1'} />
+      <Posts page={'1'} />
     </Main>
     <Aside>
       <AdminsArea />
